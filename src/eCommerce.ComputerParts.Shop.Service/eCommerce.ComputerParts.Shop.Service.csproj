@@ -31,6 +31,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj" />
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
   </ItemGroup>

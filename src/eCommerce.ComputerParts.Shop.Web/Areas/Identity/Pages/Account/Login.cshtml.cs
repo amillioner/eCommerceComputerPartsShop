@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

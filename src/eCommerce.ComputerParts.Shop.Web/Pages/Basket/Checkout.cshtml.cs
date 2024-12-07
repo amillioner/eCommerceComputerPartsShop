@@ -6,7 +6,7 @@ using Ardalis.GuardClauses;
 using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 using eCommerce.ComputerParts.Shop.Core.Exceptions;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

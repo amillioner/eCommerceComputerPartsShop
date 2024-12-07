@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Identity;
 using eCommerce.ComputerParts.Shop.Web.Shared.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;

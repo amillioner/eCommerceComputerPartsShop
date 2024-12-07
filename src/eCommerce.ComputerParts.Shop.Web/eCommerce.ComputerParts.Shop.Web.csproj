@@ -40,6 +40,8 @@
   <ItemGroup>
     <ProjectReference Include="..\BlazorAdmin\eCommerce.ComputerParts.Shop.Web.Admin.csproj" />
     <ProjectReference Include="..\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj" />
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Admin\eCommerce.ComputerParts.Shop.Web.Admin.csproj" />
     <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />

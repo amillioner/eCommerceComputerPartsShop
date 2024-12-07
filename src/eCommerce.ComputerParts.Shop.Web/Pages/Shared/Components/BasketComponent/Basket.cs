@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.eShopWeb.Web.Interfaces;

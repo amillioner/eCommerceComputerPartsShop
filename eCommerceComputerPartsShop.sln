@@ -32,6 +32,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.ComputerParts.Sho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.ComputerParts.Shop.Web.Shared", "src\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj", "{26C65C9B-DF10-4708-83C9-A7DA9AF89B27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.ComputerParts.Shop.Data", "src\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj", "{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.ComputerParts.Shop.Identity", "src\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj", "{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +82,14 @@ Global
 		{26C65C9B-DF10-4708-83C9-A7DA9AF89B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C65C9B-DF10-4708-83C9-A7DA9AF89B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C65C9B-DF10-4708-83C9-A7DA9AF89B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +105,7 @@ Global
 		{44F949E2-0552-4B53-86D0-736B40139C02} = {8FF16BDB-352E-42A2-A25F-0B5BC3A17FD7}
 		{088CE150-662E-4F1F-95ED-001054556604} = {8FF16BDB-352E-42A2-A25F-0B5BC3A17FD7}
 		{26C65C9B-DF10-4708-83C9-A7DA9AF89B27} = {8FF16BDB-352E-42A2-A25F-0B5BC3A17FD7}
+		{8AD1065F-EE74-4BB9-93C6-AB3D779D4C22} = {8FF16BDB-352E-42A2-A25F-0B5BC3A17FD7}
+		{FDE8B91A-D6A6-4299-ADD5-C6D50D579A2A} = {8FF16BDB-352E-42A2-A25F-0B5BC3A17FD7}
 	EndGlobalSection
 EndGlobal

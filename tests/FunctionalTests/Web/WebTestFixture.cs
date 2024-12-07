@@ -1,5 +1,5 @@
-﻿using eCommerce.ComputerParts.Shop.Infrastructure.Data;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+﻿using eCommerce.ComputerParts.Shop.Data;
+using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;

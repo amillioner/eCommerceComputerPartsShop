@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
-using eCommerce.ComputerParts.Shop.Infrastructure.Data;
+using eCommerce.ComputerParts.Shop.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.UnitTests.Builders;
 using Xunit;

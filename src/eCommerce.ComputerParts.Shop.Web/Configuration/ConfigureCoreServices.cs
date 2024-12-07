@@ -1,8 +1,8 @@
 ﻿using eCommerce.ComputerParts.Shop.Core;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Services;
-using eCommerce.ComputerParts.Shop.Infrastructure.Data;
-using eCommerce.ComputerParts.Shop.Infrastructure.Data.Queries;
+using eCommerce.ComputerParts.Shop.Data;
+using eCommerce.ComputerParts.Shop.Data.Queries;
 using eCommerce.ComputerParts.Shop.Infrastructure.Logging;
 using eCommerce.ComputerParts.Shop.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Ardalis.ApiEndpoints;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
-using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
