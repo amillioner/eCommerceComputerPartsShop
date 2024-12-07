@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.AuthEndpoints;
 
 public class UserInfo
 {

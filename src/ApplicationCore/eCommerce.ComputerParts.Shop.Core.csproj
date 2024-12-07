@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<!--<PropertyGroup>	
-		<RootNamespace>Microsoft.eShopWeb.ApplicationCore</RootNamespace>
-	</PropertyGroup>-->
-
 	<ItemGroup>
 		<PackageReference Include="Ardalis.GuardClauses" />
 		<PackageReference Include="Ardalis.Result" />
@@ -13,7 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BlazorShared\BlazorShared.csproj" />
+	  <ProjectReference Include="..\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

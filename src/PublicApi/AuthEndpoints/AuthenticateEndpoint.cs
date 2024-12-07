@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using Ardalis.ApiEndpoints;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
+using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.Infrastructure.Identity;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.AuthEndpoints;
 
 /// <summary>
 /// Authenticates a user

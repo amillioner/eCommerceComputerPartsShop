@@ -1,8 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>   
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Microsoft.eShopWeb.Web</RootNamespace>
     <UserSecretsId>aspnet-Web2-1FA3F72E-E7E3-4360-9E49-1CCCD7FE85F7</UserSecretsId>
     <LangVersion>latest</LangVersion>
@@ -41,8 +39,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj" />
-    <ProjectReference Include="..\BlazorAdmin\BlazorAdmin.csproj" />
-    <ProjectReference Include="..\BlazorShared\BlazorShared.csproj" />
+    <ProjectReference Include="..\BlazorAdmin\eCommerce.ComputerParts.Shop.Web.Admin.csproj" />
+    <ProjectReference Include="..\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
     <ProjectReference Include="..\Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
     <ProjectReference Include="..\PublicApi\eCommerce.ComputerParts.Shop.Service.csproj" />
   </ItemGroup>

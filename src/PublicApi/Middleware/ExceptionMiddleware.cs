@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-using BlazorShared.Models;
 using eCommerce.ComputerParts.Shop.Core.Exceptions;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.AspNetCore.Http;
 
-namespace Microsoft.eShopWeb.PublicApi.Middleware;
+namespace eCommerce.ComputerParts.Shop.Service.Middleware;
 
 public class ExceptionMiddleware
 {
@@ -24,7 +24,7 @@ public class ExceptionMiddleware
         }
         catch (Exception ex)
         {
-            await HandleExceptionAsync(httpContext, ex);        
+            await HandleExceptionAsync(httpContext, ex);
         }
     }
 

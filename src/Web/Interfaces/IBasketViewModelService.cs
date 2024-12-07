@@ -1,4 +1,5 @@
-﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
+﻿using System.Threading.Tasks;
+using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using Microsoft.eShopWeb.Web.Pages.Basket;
 
 namespace Microsoft.eShopWeb.Web.Interfaces;

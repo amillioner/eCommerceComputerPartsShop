@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using eCommerce.ComputerParts.Shop.Core.Entities;
-using Microsoft.eShopWeb.PublicApi.CatalogBrandEndpoints;
-using Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
-using Microsoft.eShopWeb.PublicApi.CatalogTypeEndpoints;
+using eCommerce.ComputerParts.Shop.Service.CatalogBrandEndpoints;
+using eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
+using eCommerce.ComputerParts.Shop.Service.CatalogTypeEndpoints;
 
-namespace Microsoft.eShopWeb.PublicApi;
+namespace eCommerce.ComputerParts.Shop.Service;
 
 public class MappingProfile : Profile
 {

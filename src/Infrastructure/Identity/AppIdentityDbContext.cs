@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace Microsoft.eShopWeb.Infrastructure.Identity;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 
 public class AppIdentityDbContext : IdentityDbContext<ApplicationUser>
 {

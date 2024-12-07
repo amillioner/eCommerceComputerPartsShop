@@ -1,10 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>  
-    <RootNamespace>BlazorShared</RootNamespace>
-    <AssemblyName>BlazorShared</AssemblyName>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="BlazorInputFile" />
     <PackageReference Include="FluentValidation" />

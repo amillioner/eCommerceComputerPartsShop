@@ -4,12 +4,12 @@ using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 using Microsoft.EntityFrameworkCore;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Data;
 
 public class CatalogContext : DbContext
 {
-    #pragma warning disable CS8618 // Required by Entity Framework
-    public CatalogContext(DbContextOptions<CatalogContext> options) : base(options) {}
+#pragma warning disable CS8618 // Required by Entity Framework
+    public CatalogContext(DbContextOptions<CatalogContext> options) : base(options) { }
 
     public DbSet<Basket> Baskets { get; set; }
     public DbSet<CatalogItem> CatalogItems { get; set; }

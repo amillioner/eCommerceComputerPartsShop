@@ -1,4 +1,4 @@
-﻿namespace BlazorAdmin.JavaScript;
+﻿namespace eCommerce.ComputerParts.Shop.Web.Admin.JavaScript;
 
 public static class JSInteropConstants
 {

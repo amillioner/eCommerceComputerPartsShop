@@ -1,14 +1,11 @@
-﻿using System;
+﻿using eCommerce.ComputerParts.Shop.Infrastructure.Data;
+using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Identity;
 using Microsoft.eShopWeb.Web.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Microsoft.eShopWeb.FunctionalTests.Web;
 

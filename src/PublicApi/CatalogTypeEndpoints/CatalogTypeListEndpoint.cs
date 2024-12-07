@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using MinimalApi.Endpoint;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogTypeEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.CatalogTypeEndpoints;
 
 /// <summary>
 /// List Catalog Types

@@ -4,8 +4,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Constants;
 using eCommerce.ComputerParts.Shop.Core.Extensions;
-using Microsoft.eShopWeb;
-using Microsoft.eShopWeb.PublicApi.AuthEndpoints;
+using eCommerce.ComputerParts.Shop.Service.AuthEndpoints;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PublicApiIntegrationTests.AuthEndpoints;

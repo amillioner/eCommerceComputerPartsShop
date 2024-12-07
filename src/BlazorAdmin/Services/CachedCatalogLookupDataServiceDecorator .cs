@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Blazored.LocalStorage;
-using BlazorShared.Interfaces;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.Extensions.Logging;
 
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public class CachedCatalogLookupDataServiceDecorator<TLookupData, TReponse>
     : ICatalogLookupDataService<TLookupData>

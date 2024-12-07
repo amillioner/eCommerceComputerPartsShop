@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BlazorAdmin;
-using BlazorAdmin.Services;
 using Blazored.LocalStorage;
-using BlazorShared;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Admin;
+using eCommerce.ComputerParts.Shop.Web.Admin.Services;
+using eCommerce.ComputerParts.Shop.Web.Shared;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

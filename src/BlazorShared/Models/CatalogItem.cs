@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using BlazorInputFile;
 
-namespace BlazorShared.Models;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
 public class CatalogItem
 {

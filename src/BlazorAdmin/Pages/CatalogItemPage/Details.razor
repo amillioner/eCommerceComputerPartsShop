@@ -2,9 +2,11 @@
 @inject IJSRuntime JSRuntime
 @inject ICatalogItemService CatalogItemService
 
-@inherits BlazorAdmin.Helpers.BlazorComponent
+@using eCommerce.ComputerParts.Shop.Web.Admin.JavaScript
+@using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces
+@using eCommerce.ComputerParts.Shop.Web.Shared.Models
 
-@namespace BlazorAdmin.Pages.CatalogItemPage
+@namespace eCommerce.ComputerParts.Shop.Web.Admin.Pages.CatalogItemPage
 
 <div class="modal @_modalClass" tabindex="-1" role="dialog" style="display:@_modalDisplay">
     <div class="modal-dialog" role="document">

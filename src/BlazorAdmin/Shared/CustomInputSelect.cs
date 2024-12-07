@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 
-namespace BlazorAdmin.Shared;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Shared;
 
 /// <summary>
 /// This is needed until 5.0 ships with native support

@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Microsoft.eShopWeb.PublicApi;
+namespace eCommerce.ComputerParts.Shop.Service;
 
 public class CustomSchemaFilters : ISchemaFilter
 {

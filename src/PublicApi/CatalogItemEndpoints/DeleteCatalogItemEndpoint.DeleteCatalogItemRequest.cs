@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+﻿namespace eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
 
 public class DeleteCatalogItemRequest : BaseRequest
 {

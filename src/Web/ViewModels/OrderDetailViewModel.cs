@@ -1,4 +1,6 @@
-﻿namespace Microsoft.eShopWeb.Web.ViewModels;
+﻿using System.Collections.Generic;
+
+namespace Microsoft.eShopWeb.Web.ViewModels;
 
 public class OrderDetailViewModel : OrderViewModel
 {

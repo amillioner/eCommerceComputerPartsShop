@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorShared.Models;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
 public class CreateCatalogItemRequest
 {

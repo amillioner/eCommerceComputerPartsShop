@@ -1,4 +1,5 @@
-﻿using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
+﻿using System;
+using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 
 namespace Microsoft.eShopWeb.Web.ViewModels;
 

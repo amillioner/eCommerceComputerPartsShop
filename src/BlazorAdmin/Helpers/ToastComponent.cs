@@ -1,8 +1,8 @@
 ﻿using System;
-using BlazorAdmin.Services;
+using eCommerce.ComputerParts.Shop.Web.Admin.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorAdmin.Helpers;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Helpers;
 
 public class ToastComponent : ComponentBase, IDisposable
 {

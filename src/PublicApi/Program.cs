@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BlazorShared;
 using eCommerce.ComputerParts.Shop.Core;
 using eCommerce.ComputerParts.Shop.Core.Constants;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Services;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data;
+using eCommerce.ComputerParts.Shop.Infrastructure.Extensions;
+using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Infrastructure.Logging;
+using eCommerce.ComputerParts.Shop.Service;
+using eCommerce.ComputerParts.Shop.Service.Middleware;
+using eCommerce.ComputerParts.Shop.Web.Shared;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.eShopWeb;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Extensions;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Infrastructure.Logging;
-using Microsoft.eShopWeb.PublicApi;
-using Microsoft.eShopWeb.PublicApi.Middleware;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -180,4 +179,7 @@ app.MapEndpoints();
 app.Logger.LogInformation("LAUNCHING PublicApi");
 app.Run();
 
-public partial class Program { }
+namespace eCommerce.ComputerParts.Shop.Service
+{
+    public partial class Program { }
+}

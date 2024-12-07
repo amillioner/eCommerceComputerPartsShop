@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorAdmin.Helpers;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Helpers;
 
 internal sealed class RefreshBroadcast
 {

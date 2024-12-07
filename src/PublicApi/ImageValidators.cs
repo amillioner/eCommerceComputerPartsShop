@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Microsoft.eShopWeb.PublicApi;
+namespace eCommerce.ComputerParts.Shop.Service;
 
 public static class ImageValidators
 {

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.JSInterop;
 
-namespace BlazorAdmin.JavaScript;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.JavaScript;
 
 public class Css
 {

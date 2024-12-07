@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace BlazorAdmin.Helpers;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Helpers;
 
 public class BlazorLayoutComponent : LayoutComponentBase
 {

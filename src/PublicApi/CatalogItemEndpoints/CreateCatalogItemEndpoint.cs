@@ -3,6 +3,7 @@ using eCommerce.ComputerParts.Shop.Core.Entities;
 using eCommerce.ComputerParts.Shop.Core.Exceptions;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Specifications;
+using eCommerce.ComputerParts.Shop.Web.Shared.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -10,7 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using MinimalApi.Endpoint;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
 
 /// <summary>
 /// Creates a new Catalog Item
@@ -27,7 +28,7 @@ public class CreateCatalogItemEndpoint : IEndpoint<IResult, CreateCatalogItemReq
     public void AddRoute(IEndpointRouteBuilder app)
     {
         app.MapPost("api/catalog-items",
-            [Authorize(Roles = BlazorShared.Authorization.Constants.Roles.ADMINISTRATORS, AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] async
+            [Authorize(Roles = Constants.Roles.ADMINISTRATORS, AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] async
             (CreateCatalogItemRequest request, IRepository<CatalogItem> itemRepository) =>
             {
                 return await HandleAsync(request, itemRepository);

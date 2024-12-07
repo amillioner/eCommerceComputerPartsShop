@@ -1,4 +1,5 @@
-﻿using Ardalis.GuardClauses;
+﻿using System.Threading.Tasks;
+using Ardalis.GuardClauses;
 using eCommerce.ComputerParts.Shop.Core.Entities;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using Microsoft.eShopWeb.Web.Interfaces;

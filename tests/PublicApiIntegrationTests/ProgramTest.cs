@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Testing;
+﻿using System.Net.Http;
+using eCommerce.ComputerParts.Shop.Service;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net.Http;
 
 namespace PublicApiIntegrationTests;
 

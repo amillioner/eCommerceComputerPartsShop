@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
+﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Specifications;
 using NSubstitute;
 using Xunit;

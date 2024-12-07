@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.Infrastructure.Data;
+﻿namespace eCommerce.ComputerParts.Shop.Infrastructure.Data;
 
 public class FileItem
 {

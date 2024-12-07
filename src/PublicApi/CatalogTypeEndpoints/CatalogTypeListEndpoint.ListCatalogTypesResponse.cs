@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogTypeEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.CatalogTypeEndpoints;
 
 public class ListCatalogTypesResponse : BaseResponse
 {

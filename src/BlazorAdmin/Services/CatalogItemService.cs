@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorShared.Interfaces;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.Extensions.Logging;
 
-
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public class CatalogItemService : ICatalogItemService
 {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace BlazorShared.Models;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
 public class ErrorDetails
 {

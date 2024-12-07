@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
-namespace BlazorShared.Interfaces;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
 
 public interface ICatalogLookupDataService<TLookupData> where TLookupData : LookupData
 {

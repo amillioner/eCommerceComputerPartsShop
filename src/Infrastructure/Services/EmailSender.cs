@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 
-namespace Microsoft.eShopWeb.Infrastructure.Services;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Services;
 
 // This class is used by the application to send email for account confirmation and password reset.
 // For more details see https://go.microsoft.com/fwlink/?LinkID=532713

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using MinimalApi.Endpoint;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
 
 /// <summary>
 /// List Catalog Items (paged)

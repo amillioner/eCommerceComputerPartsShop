@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data.Queries;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Data.Queries;
 
 public class BasketQueryService : IBasketQueryService
 {

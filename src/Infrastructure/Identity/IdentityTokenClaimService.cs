@@ -9,7 +9,7 @@ using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Microsoft.eShopWeb.Infrastructure.Identity;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 
 public class IdentityTokenClaimService : ITokenClaimsService
 {

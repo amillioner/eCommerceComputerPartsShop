@@ -1,9 +1,9 @@
-﻿using BlazorAdmin.Services;
-using BlazorShared.Interfaces;
-using BlazorShared.Models;
+﻿using eCommerce.ComputerParts.Shop.Web.Admin.Services;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazorAdmin;
+namespace eCommerce.ComputerParts.Shop.Web.Admin;
 
 public static class ServicesConfiguration
 {

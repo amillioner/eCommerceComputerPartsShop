@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlazorShared.Authorization;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Authorization;
 
 public class UserInfo
 {

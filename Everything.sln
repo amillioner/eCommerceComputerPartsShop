@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8FF16BDB-352
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.ComputerParts.Shop.Core", "src\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj", "{1A5759FF-9990-4CF5-AD78-528452C5EFCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAdmin", "src\BlazorAdmin\BlazorAdmin.csproj", "{7D7D0B73-4153-4E9B-BBD1-C9D7C8AEE970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.ComputerParts.Shop.Web.Admin", "src\BlazorAdmin\eCommerce.ComputerParts.Shop.Web.Admin.csproj", "{7D7D0B73-4153-4E9B-BBD1-C9D7C8AEE970}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShared", "src\BlazorShared\BlazorShared.csproj", "{6FD75683-D186-4BE3-ABD0-2324650B46B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.ComputerParts.Shop.Web.Shared", "src\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj", "{6FD75683-D186-4BE3-ABD0-2324650B46B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.ComputerParts.Shop.Infrastructure", "src\Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj", "{35457566-83CE-44FC-A650-265CC9C544DC}"
 EndProject

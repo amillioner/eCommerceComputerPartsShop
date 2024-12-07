@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Services;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
 using Microsoft.eShopWeb.UnitTests.Builders;
 using Xunit;
 

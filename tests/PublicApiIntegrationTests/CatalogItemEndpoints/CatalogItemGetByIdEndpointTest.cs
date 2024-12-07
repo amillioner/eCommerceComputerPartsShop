@@ -1,9 +1,8 @@
-﻿using Microsoft.eShopWeb;
-using Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Extensions;
+using eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PublicApiIntegrationTests.CatalogItemEndpoints;
 

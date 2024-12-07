@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using BlazorShared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
 
-namespace BlazorShared.Models;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
 public class CatalogTypeResponse : ILookupDataResponse<CatalogType>
 {

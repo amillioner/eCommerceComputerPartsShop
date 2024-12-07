@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.AuthEndpoints;
 
 public class AuthenticateResponse : BaseResponse
 {

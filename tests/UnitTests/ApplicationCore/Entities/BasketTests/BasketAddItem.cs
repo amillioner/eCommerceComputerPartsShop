@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
+﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using Xunit;
 
 namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.BasketTests;

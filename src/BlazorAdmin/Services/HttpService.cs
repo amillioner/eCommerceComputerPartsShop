@@ -2,11 +2,11 @@
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using BlazorShared;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.Extensions.Options;
 
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public class HttpService
 {

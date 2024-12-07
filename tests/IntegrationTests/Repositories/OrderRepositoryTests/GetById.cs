@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
 using Microsoft.eShopWeb.UnitTests.Builders;
 using Xunit;
 using Xunit.Abstractions;

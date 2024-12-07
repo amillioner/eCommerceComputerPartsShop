@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlazorShared.Models;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
 public class PagedCatalogItemResponse
 {

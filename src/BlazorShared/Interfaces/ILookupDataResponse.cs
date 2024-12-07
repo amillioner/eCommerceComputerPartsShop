@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
-namespace BlazorShared.Interfaces;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
 
 public interface ILookupDataResponse<TLookupData> where TLookupData : LookupData
 {

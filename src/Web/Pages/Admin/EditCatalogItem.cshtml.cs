@@ -7,7 +7,7 @@ using Microsoft.eShopWeb.Web.ViewModels;
 
 namespace Microsoft.eShopWeb.Web.Pages.Admin;
 
-[Authorize(Roles = BlazorShared.Authorization.Constants.Roles.ADMINISTRATORS)]
+[Authorize(Roles = eCommerce.ComputerParts.Shop.Web.Shared.Authorization.Constants.Roles.ADMINISTRATORS)]
 public class EditCatalogItemModel : PageModel
 {
     private readonly ICatalogItemViewModelService _catalogItemViewModelService;

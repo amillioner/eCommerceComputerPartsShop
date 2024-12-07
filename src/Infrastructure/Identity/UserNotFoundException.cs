@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.Infrastructure.Identity;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 
 public class UserNotFoundException : Exception
 {

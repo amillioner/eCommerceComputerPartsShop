@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public class CacheEntry<T>
 {

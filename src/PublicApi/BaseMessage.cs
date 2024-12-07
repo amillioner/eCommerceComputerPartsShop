@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.PublicApi;
+namespace eCommerce.ComputerParts.Shop.Service;
 
 /// <summary>
 /// Base class used by API requests

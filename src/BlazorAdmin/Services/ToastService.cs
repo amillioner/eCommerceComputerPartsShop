@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Timers;
 
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public enum ToastLevel
 {

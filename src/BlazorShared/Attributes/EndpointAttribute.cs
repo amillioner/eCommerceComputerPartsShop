@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorShared.Attributes;
+namespace eCommerce.ComputerParts.Shop.Web.Shared.Attributes;
 
 public class EndpointAttribute : Attribute
 {

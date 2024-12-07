@@ -1,33 +1,45 @@
-﻿using System.Net.Mime;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Mime;
 using Ardalis.ListStartupServices;
 using Azure.Identity;
-using BlazorAdmin;
-using BlazorAdmin.Services;
 using Blazored.LocalStorage;
-using BlazorShared;
 using eCommerce.ComputerParts.Shop.Core.Extensions;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data;
+using eCommerce.ComputerParts.Shop.Infrastructure.Extensions;
+using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
+using eCommerce.ComputerParts.Shop.Web.Admin;
+using eCommerce.ComputerParts.Shop.Web.Admin.Services;
+using eCommerce.ComputerParts.Shop.Web.Shared;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Extensions;
-using Microsoft.eShopWeb.Infrastructure.Identity;
 using Microsoft.eShopWeb.Web;
 using Microsoft.eShopWeb.Web.Configuration;
 using Microsoft.eShopWeb.Web.HealthChecks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddConsole();
 
-if (builder.Environment.IsDevelopment() || builder.Environment.EnvironmentName == "Docker"){
+if (builder.Environment.IsDevelopment() || builder.Environment.EnvironmentName == "Docker")
+{
     // Configure SQL Server (local)
     InfrastructureDependencies.ConfigureServices(builder.Configuration, builder.Services);
 }
-else{
+else
+{
     // Configure SQL Server (prod)
     var credential = new ChainedTokenCredential(new AzureDeveloperCliCredential(), new DefaultAzureCredential());
     builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["AZURE_KEY_VAULT_ENDPOINT"] ?? ""), credential);

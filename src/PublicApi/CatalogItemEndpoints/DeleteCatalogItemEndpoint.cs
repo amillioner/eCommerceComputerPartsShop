@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Entities;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -8,7 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using MinimalApi.Endpoint;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+namespace eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
 
 /// <summary>
 /// Deletes a Catalog Item
@@ -18,7 +19,7 @@ public class DeleteCatalogItemEndpoint : IEndpoint<IResult, DeleteCatalogItemReq
     public void AddRoute(IEndpointRouteBuilder app)
     {
         app.MapDelete("api/catalog-items/{catalogItemId}",
-            [Authorize(Roles = BlazorShared.Authorization.Constants.Roles.ADMINISTRATORS, AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] async
+            [Authorize(Roles = Constants.Roles.ADMINISTRATORS, AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] async
             (int catalogItemId, IRepository<CatalogItem> itemRepository) =>
             {
                 return await HandleAsync(new DeleteCatalogItemRequest(catalogItemId), itemRepository);

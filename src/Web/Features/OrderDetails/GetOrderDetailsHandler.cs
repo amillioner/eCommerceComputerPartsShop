@@ -1,4 +1,7 @@
-﻿using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
+﻿using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Specifications;
 using MediatR;
@@ -15,7 +18,7 @@ public class GetOrderDetailsHandler : IRequestHandler<GetOrderDetails, OrderDeta
         _orderRepository = orderRepository;
     }
 
-    public async Task<OrderDetailViewModel?> Handle(GetOrderDetails request,
+    public async Task<OrderDetailViewModel> Handle(GetOrderDetails request,
         CancellationToken cancellationToken)
     {
         var spec = new OrderWithItemsByIdSpec(request.OrderId);

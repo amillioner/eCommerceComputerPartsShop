@@ -1,10 +1,12 @@
 ﻿using eCommerce.ComputerParts.Shop.Core;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Services;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Data.Queries;
-using Microsoft.eShopWeb.Infrastructure.Logging;
-using Microsoft.eShopWeb.Infrastructure.Services;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data;
+using eCommerce.ComputerParts.Shop.Infrastructure.Data.Queries;
+using eCommerce.ComputerParts.Shop.Infrastructure.Logging;
+using eCommerce.ComputerParts.Shop.Infrastructure.Services;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.eShopWeb.Web.Configuration;
 

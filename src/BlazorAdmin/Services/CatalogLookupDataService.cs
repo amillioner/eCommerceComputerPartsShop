@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Reflection;
 using System.Threading.Tasks;
-using BlazorShared;
-using BlazorShared.Attributes;
-using BlazorShared.Interfaces;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Shared;
+using eCommerce.ComputerParts.Shop.Web.Shared.Attributes;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace BlazorAdmin.Services;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Services;
 
 public class CatalogLookupDataService<TLookupData, TReponse>
     : ICatalogLookupDataService<TLookupData>

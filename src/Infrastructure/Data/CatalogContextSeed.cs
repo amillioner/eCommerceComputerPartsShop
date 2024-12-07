@@ -5,7 +5,7 @@ using eCommerce.ComputerParts.Shop.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data;
+namespace eCommerce.ComputerParts.Shop.Infrastructure.Data;
 
 public class CatalogContextSeed
 {
@@ -50,7 +50,7 @@ public class CatalogContextSeed
             if (retryForAvailability >= 10) throw;
 
             retryForAvailability++;
-            
+
             logger.LogError(ex.Message);
             await SeedAsync(catalogContext, logger, retryForAvailability);
             throw;

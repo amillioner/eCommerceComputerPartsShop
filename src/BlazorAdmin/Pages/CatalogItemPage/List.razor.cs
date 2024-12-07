@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorAdmin.Helpers;
-using BlazorShared.Interfaces;
-using BlazorShared.Models;
+using eCommerce.ComputerParts.Shop.Web.Admin.Helpers;
+using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces;
+using eCommerce.ComputerParts.Shop.Web.Shared.Models;
 
-namespace BlazorAdmin.Pages.CatalogItemPage;
+namespace eCommerce.ComputerParts.Shop.Web.Admin.Pages.CatalogItemPage;
 
 public partial class List : BlazorComponent
 {

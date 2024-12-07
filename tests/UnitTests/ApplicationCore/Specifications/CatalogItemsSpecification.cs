@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using eCommerce.ComputerParts.Shop.Core.Entities;
+﻿using eCommerce.ComputerParts.Shop.Core.Entities;
 using NSubstitute;
 using Xunit;
 

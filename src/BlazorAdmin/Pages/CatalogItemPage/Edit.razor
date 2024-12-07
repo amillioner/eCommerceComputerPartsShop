@@ -2,9 +2,12 @@
 @inject IJSRuntime JSRuntime
 @inject ICatalogItemService CatalogItemService
 
-@inherits BlazorAdmin.Helpers.BlazorComponent
+@using eCommerce.ComputerParts.Shop.Web.Admin.JavaScript
+@using eCommerce.ComputerParts.Shop.Web.Shared.Interfaces
+@using eCommerce.ComputerParts.Shop.Web.Shared.Models
+@inherits eCommerce.ComputerParts.Shop.Web.Admin.Helpers.BlazorComponent
 
-@namespace BlazorAdmin.Pages.CatalogItemPage
+@namespace eCommerce.ComputerParts.Shop.Web.Admin.Pages.CatalogItemPage
 
 <div class="modal @_modalClass" tabindex="-1" role="dialog" style="display:@_modalDisplay">
     <div class="modal-dialog" role="document">
@@ -54,7 +57,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-6">Brand</label>
                                         <div class="col-md-12">
-                                            <CustomInputSelect @bind-Value="_item.CatalogBrandId" class="form-control">
+                                            <CustomInputSelect @bind="_item.CatalogBrandId" class="form-control">
                                                 @foreach (var brand in Brands)
                                                     {
                                                     <option value="@brand.Id.ToString()">@brand.Name</option>
@@ -67,7 +70,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-6">Type</label>
                                         <div class="col-md-12">
-                                            <CustomInputSelect @bind-Value="_item.CatalogTypeId" class="form-control">
+                                            <CustomInputSelect @bind="_item.CatalogTypeId" class="form-control">
                                                 @foreach (var type in Types)
                                                     {
                                                     <option value="@type.Id">@type.Name</option>

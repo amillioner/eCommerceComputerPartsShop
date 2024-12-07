@@ -1,12 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 using Ardalis.GuardClauses;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
+using eCommerce.ComputerParts.Shop.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.Extensions.Logging;
 
 namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account;
 
@@ -74,7 +79,7 @@ public class LoginModel : PageModel
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, set lockoutOnFailure: true
             //var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
-            var result = await _signInManager.PasswordSignInAsync(Input!.Email!, Input!.Password!, 
+            var result = await _signInManager.PasswordSignInAsync(Input!.Email!, Input!.Password!,
                 false, true);
 
             if (result.Succeeded)
