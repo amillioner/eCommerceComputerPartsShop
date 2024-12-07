@@ -8,9 +8,10 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj" />
+		<Folder Include="Data\Migrations\" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Data\Migrations\" />
+	  <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+	  <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
 	</ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Core.Extensions;
-using eCommerce.ComputerParts.Shop.Web.Shared.Models;
+using eCommerce.ComputerParts.Shop.Service.CatalogItemEndpoints;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PublicApiIntegrationTests.CatalogItemEndpoints;

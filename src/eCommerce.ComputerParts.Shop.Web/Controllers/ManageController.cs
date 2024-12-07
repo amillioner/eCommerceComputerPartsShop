@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.eShopWeb.Web.Extensions;
 using Microsoft.eShopWeb.Web.ViewModels.Manage;
+using IEmailSender = eCommerce.ComputerParts.Shop.Core.Interfaces.IEmailSender;
 
 namespace Microsoft.eShopWeb.Web.Controllers;
 

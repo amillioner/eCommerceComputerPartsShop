@@ -30,8 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj" />
-    <ProjectReference Include="..\Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
   </ItemGroup>
 
 

@@ -13,6 +13,7 @@
 	
   <ItemGroup>
 	  <ProjectReference Include="..\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
+	  <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

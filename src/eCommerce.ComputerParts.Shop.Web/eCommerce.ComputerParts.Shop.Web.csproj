@@ -38,11 +38,11 @@
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj" />
     <ProjectReference Include="..\BlazorAdmin\eCommerce.ComputerParts.Shop.Web.Admin.csproj" />
     <ProjectReference Include="..\BlazorShared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
-    <ProjectReference Include="..\Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
-    <ProjectReference Include="..\PublicApi\eCommerce.ComputerParts.Shop.Service.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Admin\eCommerce.ComputerParts.Shop.Web.Admin.csproj" />
+    <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />

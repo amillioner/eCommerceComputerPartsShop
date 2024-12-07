@@ -21,16 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ApplicationCore\eCommerce.ComputerParts.Shop.Core.csproj" />
-    <ProjectReference Include="..\..\src\Web\eCommerce.ComputerParts.Shop.Web.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ApplicationCore\Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+    <ProjectReference Include="..\..\src\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj" />
   </ItemGroup>
 
 </Project>
