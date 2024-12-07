@@ -12,7 +12,7 @@ namespace Microsoft.eShopWeb.IntegrationTests.Repositories.BasketRepositoryTests
 public class SetQuantities
 {
     private readonly CatalogContext _catalogContext;
-    private readonly EfRepository<Basket> _basketRepository;
+    private readonly CatalogRepository<Basket> _basketRepository;
     private readonly BasketBuilder BasketBuilder = new BasketBuilder();
 
     public SetQuantities()
@@ -21,7 +21,7 @@ public class SetQuantities
             .UseInMemoryDatabase(databaseName: "TestCatalog")
             .Options;
         _catalogContext = new CatalogContext(dbOptions);
-        _basketRepository = new EfRepository<Basket>(_catalogContext);
+        _basketRepository = new CatalogRepository<Basket>(_catalogContext);
     }
 
     [Fact]

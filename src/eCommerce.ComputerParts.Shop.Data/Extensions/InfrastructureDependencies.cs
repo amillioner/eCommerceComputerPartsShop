@@ -1,10 +1,9 @@
-﻿using eCommerce.ComputerParts.Shop.Data;
-using eCommerce.ComputerParts.Shop.Identity;
+﻿using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace eCommerce.ComputerParts.Shop.Infrastructure.Extensions;
+namespace eCommerce.ComputerParts.Shop.Data.Extensions;
 
 public static class InfrastructureDependencies
 {

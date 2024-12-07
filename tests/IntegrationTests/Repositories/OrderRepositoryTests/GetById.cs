@@ -12,7 +12,7 @@ namespace Microsoft.eShopWeb.IntegrationTests.Repositories.OrderRepositoryTests;
 public class GetById
 {
     private readonly CatalogContext _catalogContext;
-    private readonly EfRepository<Order> _orderRepository;
+    private readonly CatalogRepository<Order> _orderRepository;
     private OrderBuilder OrderBuilder { get; } = new OrderBuilder();
     private readonly ITestOutputHelper _output;
     public GetById(ITestOutputHelper output)
@@ -22,7 +22,7 @@ public class GetById
             .UseInMemoryDatabase(databaseName: "TestCatalog")
             .Options;
         _catalogContext = new CatalogContext(dbOptions);
-        _orderRepository = new EfRepository<Order>(_catalogContext);
+        _orderRepository = new CatalogRepository<Order>(_catalogContext);
     }
 
     [Fact]

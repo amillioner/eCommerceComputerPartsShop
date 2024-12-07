@@ -6,8 +6,8 @@ using eCommerce.ComputerParts.Shop.Core.Constants;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Services;
 using eCommerce.ComputerParts.Shop.Data;
+using eCommerce.ComputerParts.Shop.Data.Extensions;
 using eCommerce.ComputerParts.Shop.Identity;
-using eCommerce.ComputerParts.Shop.Infrastructure.Extensions;
 using eCommerce.ComputerParts.Shop.Infrastructure.Logging;
 using eCommerce.ComputerParts.Shop.Service;
 using eCommerce.ComputerParts.Shop.Service.Middleware;
@@ -38,8 +38,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
         .AddEntityFrameworkStores<AppIdentityDbContext>()
         .AddDefaultTokenProviders();
 
-builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-builder.Services.AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(CatalogRepository<>));
+builder.Services.AddScoped(typeof(IReadRepository<>), typeof(CatalogRepository<>));
 builder.Services.Configure<CatalogSettings>(builder.Configuration);
 var catalogSettings = builder.Configuration.Get<CatalogSettings>() ?? new CatalogSettings();
 builder.Services.AddSingleton<IUriComposer>(new UriComposer(catalogSettings));
