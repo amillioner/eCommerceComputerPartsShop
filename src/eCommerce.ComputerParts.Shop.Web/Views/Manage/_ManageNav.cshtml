@@ -1,7 +1,7 @@
 ﻿@using eCommerce.ComputerParts.Shop.Identity
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@using Microsoft.eShopWeb.Infrastructure.Identity
+@using eCommerce.ComputerParts.Shop.Infrastructure
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

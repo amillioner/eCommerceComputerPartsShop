@@ -61,11 +61,11 @@ public class CatalogContextSeed
     {
         return new List<CatalogBrand>
             {
-                new("Azure"),
-                new(".NET"),
-                new("Visual Studio"),
-                new("SQL Server"),
-                new("Other")
+                new("MSI"),
+                new("CORSAIR"),
+                new("Intel"),
+                new("Samsung"),
+                new("Seagate")
             };
     }
 
@@ -73,10 +73,10 @@ public class CatalogContextSeed
     {
         return new List<CatalogType>
             {
-                new("Mug"),
-                new("T-Shirt"),
-                new("Sheet"),
-                new("USB Memory Stick")
+                new("Gaming"),
+                new("Cooler"),
+                new("Motherboard"),
+                new("Ram DDR")
             };
     }
 
@@ -84,18 +84,18 @@ public class CatalogContextSeed
     {
         return new List<CatalogItem>
             {
-                new(2,2, ".NET Bot Black Sweatshirt", ".NET Bot Black Sweatshirt", 19.5M,  "https://cdn.neobits.com/images/psogasvsas2000/PS/PS850FX4-1.jpg"),
-                new(1,2, "MAG B550 TOMAHAWK", "MAG B550 TOMAHAWK", 8.50M, "https://us-store.msi.com/Motherboards/AMD-Platform-Motherboard/MAG-B550-TOMAHAWK"),
-                new(2,5, "Prism White T-Shirt", "Prism White T-Shirt", 12,  "http://catalogbaseurltobereplaced/images/products/3.png"),
-                new(2,2, ".NET Foundation Sweatshirt", ".NET Foundation Sweatshirt", 12, "http://catalogbaseurltobereplaced/images/products/4.png"),
-                new(3,5, "Roslyn Red Sheet", "Roslyn Red Sheet", 8.5M, "http://catalogbaseurltobereplaced/images/products/5.png"),
-                new(2,2, ".NET Blue Sweatshirt", ".NET Blue Sweatshirt", 12, "http://catalogbaseurltobereplaced/images/products/6.png"),
-                new(2,5, "Roslyn Red T-Shirt", "Roslyn Red T-Shirt",  12, "http://catalogbaseurltobereplaced/images/products/7.png"),
-                new(2,5, "Kudu Purple Sweatshirt", "Kudu Purple Sweatshirt", 8.5M, "http://catalogbaseurltobereplaced/images/products/8.png"),
-                new(1,5, "Cup<T> White Mug", "Cup<T> White Mug", 12, "http://catalogbaseurltobereplaced/images/products/9.png"),
-                new(3,2, ".NET Foundation Sheet", ".NET Foundation Sheet", 12, "http://catalogbaseurltobereplaced/images/products/10.png"),
-                new(3,2, "Cup<T> Sheet", "Cup<T> Sheet", 8.5M, "http://catalogbaseurltobereplaced/images/products/11.png"),
-                new(2,5, "Prism White TShirt", "Prism White TShirt", 12, "http://catalogbaseurltobereplaced/images/products/12.png")
+                new(2,2, "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", 190.5M,  "https://c1.neweggimages.com/productimage/nb1280/22-183-793-V06.jpg"),
+                new(1,2, "MSI Ventus GeForce RTX 4060", "MSI Ventus GeForce RTX 4060", 1800.50M, "https://c1.neweggimages.com/productimage/nb1280/14-137-804-11.jpg"),
+                new(2,5, "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", 458,  "https://c1.neweggimages.com/productimage/nb1280/13-144-557-08.jpg"),
+                new(2,2, "CORSAIR iCUE H150i ELITE CAPELLIX XT Liquid CPU Cooler - AF120 RGB ELITE Fans - 360mm Radiator", "CORSAIR iCUE H150i ELITE CAPELLIX XT Liquid CPU Cooler - AF120 RGB ELITE Fans - 360mm Radiator", 123, "https://c1.neweggimages.com/productimage/nb1280/35-181-332-01.png"),
+                new(3,5, "G.SKILL Flare X Series 64GB (2 x 32GB) 288-Pin PC RAM DDR5 6000", "G.SKILL Flare X Series 64GB (2 x 32GB) 288-Pin PC RAM DDR5 6000", 8.5M, "https://c1.neweggimages.com/productimage/nb1280/20-374-419-07.png"),
+                new(2,2, "Cooler Master Hyper", "Cooler Master Hyper", 147, "https://c1.neweggimages.com/productimage/nb1280/35-103-364-01.png"),
+                new(2,5, "Intel Core Ultra 7 265K", "Intel Core Ultra 7 265K",  120, "https://c1.neweggimages.com/productimage/nb1280/19-118-506-06.jpg"),
+                new(2,5, "SAMSUNG 990 EVO PLUS SSD 4TB", "SAMSUNG 990 EVO PLUS SSD 4TB", 90.5M, "https://c1.neweggimages.com/productimage/nb1280/20-147-901-02.jpg"),
+                new(1,5, "CRUA 30\" Curved Gaming Monitor", "CRUA 30\" Curved Gaming Monitor", 174, "https://c1.neweggimages.com/productimage/nb1280/BSK6S24050604FO3852.jpg"),
+                new(3,2, "ABS Cyclone Aqua Gaming PC", "ABS Cyclone Aqua Gaming PC", 979, "https://c1.neweggimages.com/productimage/nb1280/83-360-497-01.jpg"),
+                new(3,2, "AMD Ryzen 9 7950X", "AMD Ryzen 9 7950X", 496.5M, "https://c1.neweggimages.com/productimage/nb1280/19-113-771-09.jpg"),
+                new(2,5, "GameSir G8+ Bluetooth Wireless", "GameSir G8+ Bluetooth Wireless", 79, "https://c1.neweggimages.com/productimage/nb1280/A9U6S2410220IBL4A94.jpg")
             };
     }
 }
