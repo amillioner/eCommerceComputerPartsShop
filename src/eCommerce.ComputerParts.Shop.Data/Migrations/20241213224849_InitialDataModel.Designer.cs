@@ -12,7 +12,7 @@ using eCommerce.ComputerParts.Shop.Data;
 namespace eCommerce.ComputerParts.Shop.Data.Migrations
 {
     [DbContext(typeof(CatalogContext))]
-    [Migration("20241212025656_InitialDataModel")]
+    [Migration("20241213224849_InitialDataModel")]
     partial class InitialDataModel
     {
         /// <inheritdoc />
@@ -116,8 +116,8 @@ namespace eCommerce.ComputerParts.Shop.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("PictureUri")
                         .HasColumnType("nvarchar(max)");
@@ -287,8 +287,8 @@ namespace eCommerce.ComputerParts.Shop.Data.Migrations
 
                             b1.Property<string>("ProductName")
                                 .IsRequired()
-                                .HasMaxLength(50)
-                                .HasColumnType("nvarchar(50)");
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)");
 
                             b1.HasKey("OrderItemId");
 

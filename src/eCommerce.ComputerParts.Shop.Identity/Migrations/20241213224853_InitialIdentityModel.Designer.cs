@@ -12,7 +12,7 @@ using eCommerce.ComputerParts.Shop.Identity;
 namespace eCommerce.ComputerParts.Shop.Identity.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20241212023237_InitialIdentityModel")]
+    [Migration("20241213224853_InitialIdentityModel")]
     partial class InitialIdentityModel
     {
         /// <inheritdoc />

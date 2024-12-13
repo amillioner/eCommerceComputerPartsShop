@@ -43,7 +43,7 @@ public class CheckoutTest : IClassFixture<TestApplication>
         var loginResponse = await Client.GetAsync("/Identity/Account/Login");
         var longinKeyValues = new List<KeyValuePair<string, string>>
         {
-            new KeyValuePair<string, string>("email", "demouser@microsoft.com"),
+            new KeyValuePair<string, string>("email", "demouser@computerparts.com"),
             new KeyValuePair<string, string>("password", "Pass@word1"),
             new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(await loginResponse.Content.ReadAsStringAsync()))
         };

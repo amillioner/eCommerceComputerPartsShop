@@ -16,7 +16,7 @@ public class CatalogItemConfiguration : IEntityTypeConfiguration<CatalogItem>
 
         builder.Property(ci => ci.Name)
             .IsRequired(true)
-            .HasMaxLength(500);
+            .HasMaxLength(50);
 
         builder.Property(ci => ci.Price)
             .IsRequired(true)

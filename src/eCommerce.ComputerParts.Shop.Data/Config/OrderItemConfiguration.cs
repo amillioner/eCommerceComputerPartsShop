@@ -13,7 +13,7 @@ public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
             io.WithOwner();
 
             io.Property(cio => cio.ProductName)
-                .HasMaxLength(50)
+                .HasMaxLength(500)
                 .IsRequired();
         });
 

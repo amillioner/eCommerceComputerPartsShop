@@ -12,7 +12,7 @@ namespace PublicApiIntegrationTests
     {
         public static string GetAdminUserToken()
         {
-            string userName = "admin@microsoft.com";
+            string userName = "admin@computerparts.com";
             string[] roles = { "Administrators" };
 
             return CreateToken(userName, roles);
@@ -20,7 +20,7 @@ namespace PublicApiIntegrationTests
 
         public static string GetNormalUserToken()
         {
-            string userName = "demouser@microsoft.com";
+            string userName = "demouser@computerparts.com";
             string[] roles = { };
 
             return CreateToken(userName, roles);

@@ -25,7 +25,7 @@ public class AccountControllerSignIn : IClassFixture<TestApplication>
         response.EnsureSuccessStatusCode();
         var stringResponse = await response.Content.ReadAsStringAsync();
 
-        Assert.Contains("demouser@microsoft.com", stringResponse);
+        Assert.Contains("demouser@computerparts.com", stringResponse);
     }
 
     [Fact]
@@ -62,7 +62,7 @@ public class AccountControllerSignIn : IClassFixture<TestApplication>
 
         var keyValues = new List<KeyValuePair<string, string>>
         {
-            new KeyValuePair<string, string>("Email", "demouser@microsoft.com"),
+            new KeyValuePair<string, string>("Email", "demouser@computerparts.com"),
             new KeyValuePair<string, string>("Password", "Pass@word1"),
             new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringResponse1))
         };
@@ -82,7 +82,7 @@ public class AccountControllerSignIn : IClassFixture<TestApplication>
         var stringResponse1 = await getResponse.Content.ReadAsStringAsync();
         var keyValues = new List<KeyValuePair<string, string>>
         {
-            new KeyValuePair<string, string>("Email", "demouser@microsoft.com"),
+            new KeyValuePair<string, string>("Email", "demouser@computerparts.com"),
             new KeyValuePair<string, string>("Password", "Pass@word1"),
             new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringResponse1))
         };
@@ -97,7 +97,7 @@ public class AccountControllerSignIn : IClassFixture<TestApplication>
         //Update phone number
         var updateProfileValues = new List<KeyValuePair<string, string>>
         {
-            new KeyValuePair<string, string>("Email", "demouser@microsoft.com"),
+            new KeyValuePair<string, string>("Email", "demouser@computerparts.com"),
             new KeyValuePair<string, string>("PhoneNumber", "03656565"),
             new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringProfileResponse))
         };
