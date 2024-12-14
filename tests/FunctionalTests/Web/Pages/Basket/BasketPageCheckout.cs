@@ -39,7 +39,7 @@ public class BasketPageCheckout : IClassFixture<TestApplication>
         var postResponse = await Client.PostAsync("/basket/index", formContent);
         postResponse.EnsureSuccessStatusCode();
         var stringResponse = await postResponse.Content.ReadAsStringAsync();
-        Assert.Contains(".NET Black &amp; White Mug", stringResponse);
+        Assert.Contains("newegg", stringResponse);
 
         keyValues.Clear();
 

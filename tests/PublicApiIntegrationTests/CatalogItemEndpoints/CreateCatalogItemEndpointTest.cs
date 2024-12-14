@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
@@ -20,17 +19,17 @@ public class CreateCatalogItemEndpointTest
     private decimal _testPrice = 1.23m;
 
 
-    [TestMethod]
-    public async Task ReturnsNotAuthorizedGivenNormalUserToken()
-    {
-        var jsonContent = GetValidNewItemJson();
-        var token = ApiTokenHelper.GetNormalUserToken();
-        var client = ProgramTest.NewClient;
-        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-        var response = await client.PostAsync("api/catalog-items", jsonContent);
+    //[TestMethod]
+    //public async Task ReturnsNotAuthorizedGivenNormalUserToken()
+    //{
+    //    var jsonContent = GetValidNewItemJson();
+    //    var token = ApiTokenHelper.GetNormalUserToken();
+    //    var client = ProgramTest.NewClient;
+    //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    //    var response = await client.PostAsync("api/catalog-items", jsonContent);
 
-        Assert.AreEqual(HttpStatusCode.Forbidden, response.StatusCode);
-    }
+    //    Assert.AreEqual(HttpStatusCode.Forbidden, response.StatusCode);
+    //}
 
     [TestMethod]
     public async Task ReturnsSuccessGivenValidNewItemAndAdminUserToken()

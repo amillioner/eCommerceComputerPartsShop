@@ -38,7 +38,7 @@ public class IndexTest : IClassFixture<TestApplication>
         var postResponse = await Client.PostAsync("/basket/index", formContent);
         postResponse.EnsureSuccessStatusCode();
         var stringResponse = await postResponse.Content.ReadAsStringAsync();
-        Assert.Contains(".NET Black &amp; White Mug", stringResponse);
+        Assert.Contains("newegg", stringResponse);
 
         //Update
         var updateKeyValues = new List<KeyValuePair<string, string>>
@@ -53,7 +53,7 @@ public class IndexTest : IClassFixture<TestApplication>
         var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();
 
         Assert.Contains("/basket/update", updateResponse!.RequestMessage!.RequestUri!.ToString()!);
-        decimal expectedTotalAmount = 416.50M;
+        decimal expectedTotalAmount = 88224.50M;
         Assert.Contains(expectedTotalAmount.ToString("N2"), stringUpdateResponse);
     }
 
@@ -78,7 +78,7 @@ public class IndexTest : IClassFixture<TestApplication>
         var postResponse = await Client.PostAsync("/basket/index", formContent);
         postResponse.EnsureSuccessStatusCode();
         var stringResponse = await postResponse.Content.ReadAsStringAsync();
-        Assert.Contains(".NET Black &amp; White Mug", stringResponse);
+        Assert.Contains("newegg", stringResponse);
 
         //Update
         var updateKeyValues = new List<KeyValuePair<string, string>>

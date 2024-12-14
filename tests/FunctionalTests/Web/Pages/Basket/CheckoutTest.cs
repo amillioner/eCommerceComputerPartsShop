@@ -37,7 +37,7 @@ public class CheckoutTest : IClassFixture<TestApplication>
         var postResponse = await Client.PostAsync("/basket/index", formContent);
         postResponse.EnsureSuccessStatusCode();
         var stringPostResponse = await postResponse.Content.ReadAsStringAsync();
-        Assert.Contains(".NET Black &amp; White Mug", stringPostResponse);
+        Assert.Contains("newegg", stringPostResponse);
 
         //Load login page
         var loginResponse = await Client.GetAsync("/Identity/Account/Login");
