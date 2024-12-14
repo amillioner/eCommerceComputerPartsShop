@@ -4,7 +4,7 @@ using System.Text;
 using eCommerce.ComputerParts.Shop.Core.Constants;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Microsoft.eShopWeb.FunctionalTests.PublicApi;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.PublicApi;
 
 public class ApiTokenHelper
 {

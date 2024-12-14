@@ -18,7 +18,7 @@ public class CatalogItemGetByIdEndpointTest
         var model = stringResponse.FromJson<GetByIdCatalogItemResponse>();
 
         Assert.AreEqual(5, model!.CatalogItem.Id);
-        Assert.AreEqual("Roslyn Red Sheet", model.CatalogItem.Name);
+        Assert.AreEqual("G.SKILL Flare X Series 64GB (2 x 32GB) 288-Pin PC RAM DDR5 6000", model.CatalogItem.Name);
     }
 
     [TestMethod]

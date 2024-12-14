@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>  
-    <RootNamespace>Microsoft.eShopWeb.IntegrationTests</RootNamespace>
+    <RootNamespace>eCommerce.ComputerParts.Shop.IntegrationTests</RootNamespace>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

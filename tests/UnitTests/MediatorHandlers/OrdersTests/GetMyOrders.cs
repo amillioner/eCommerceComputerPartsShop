@@ -5,7 +5,7 @@ using Microsoft.eShopWeb.Web.Features.MyOrders;
 using NSubstitute;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.MediatorHandlers.OrdersTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.MediatorHandlers.OrdersTests;
 
 public class GetMyOrders
 {
@@ -23,7 +23,7 @@ public class GetMyOrders
     [Fact]
     public async Task NotReturnNullIfOrdersArePresIent()
     {
-        var request = new eShopWeb.Web.Features.MyOrders.GetMyOrders("SomeUserName");
+        var request = new Microsoft.eShopWeb.Web.Features.MyOrders.GetMyOrders("SomeUserName");
 
         var handler = new GetMyOrdersHandler(_mockOrderRepository);
 

@@ -1,6 +1,6 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 
-namespace Microsoft.eShopWeb.UnitTests.Builders;
+namespace eCommerce.ComputerParts.Shop.UnitTests.Builders;
 
 public class OrderBuilder
 {

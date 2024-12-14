@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.Web.Controllers;
 
 [Collection("Sequential")]
 public class CatalogControllerIndex : IClassFixture<TestApplication>

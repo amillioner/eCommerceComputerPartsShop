@@ -1,8 +1,8 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
-using Microsoft.eShopWeb.UnitTests.Builders;
+using eCommerce.ComputerParts.Shop.UnitTests.Builders;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.OrderTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Entities.OrderTests;
 
 public class OrderTotal
 {

@@ -5,7 +5,7 @@ using Microsoft.eShopWeb.Web.Features.OrderDetails;
 using NSubstitute;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.MediatorHandlers.OrdersTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.MediatorHandlers.OrdersTests;
 
 public class GetOrderDetails
 {
@@ -24,7 +24,7 @@ public class GetOrderDetails
     [Fact]
     public async Task NotBeNullIfOrderExists()
     {
-        var request = new eShopWeb.Web.Features.OrderDetails.GetOrderDetails("SomeUserName", 0);
+        var request = new Microsoft.eShopWeb.Web.Features.OrderDetails.GetOrderDetails("SomeUserName", 0);
 
         var handler = new GetOrderDetailsHandler(_mockOrderRepository);
 

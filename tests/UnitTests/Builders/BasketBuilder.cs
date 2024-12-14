@@ -1,7 +1,7 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using NSubstitute;
 
-namespace Microsoft.eShopWeb.UnitTests.Builders;
+namespace eCommerce.ComputerParts.Shop.UnitTests.Builders;
 
 public class BasketBuilder
 {

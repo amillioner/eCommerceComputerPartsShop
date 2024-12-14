@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Extensions;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Extensions;
 
 public class TestParent : IEquatable<TestParent>
 {

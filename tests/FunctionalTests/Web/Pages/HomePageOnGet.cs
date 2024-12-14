@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Pages;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.Web.Pages;
 
 [Collection("Sequential")]
 public class HomePageOnGet : IClassFixture<TestApplication>

@@ -2,7 +2,7 @@
 
   <PropertyGroup>   
     <Nullable>enable</Nullable>
-    <RootNamespace>Microsoft.eShopWeb.UnitTests</RootNamespace>
+    <RootNamespace>eCommerce.ComputerParts.Shop.UnitTests</RootNamespace>
     <IsPackable>false</IsPackable>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>

@@ -1,13 +1,12 @@
 ﻿using eCommerce.ComputerParts.Shop.Catalog;
 using eCommerce.ComputerParts.Shop.Identity;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Web.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.Web;
 
 public class TestApplication : WebApplicationFactory<IBasketViewModelService>
 {

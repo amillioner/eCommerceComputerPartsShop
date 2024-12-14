@@ -1,7 +1,7 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Specifications;
 
 public class CustomerOrdersWithItemsSpecification
 {

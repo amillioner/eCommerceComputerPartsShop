@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.Web.Controllers;
 
 [Collection("Sequential")]
 public class AccountControllerSignIn : IClassFixture<TestApplication>

@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Catalog;
 using eCommerce.ComputerParts.Shop.Core.Entities.OrderAggregate;
 using eCommerce.ComputerParts.Shop.Core.Specifications;
+using eCommerce.ComputerParts.Shop.UnitTests.Builders;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.UnitTests.Builders;
 using Xunit;
 
-namespace Microsoft.eShopWeb.IntegrationTests.Repositories.OrderRepositoryTests;
+namespace eCommerce.ComputerParts.Shop.IntegrationTests.Repositories.OrderRepositoryTests;
 
 public class GetByIdWithItemsAsync
 {

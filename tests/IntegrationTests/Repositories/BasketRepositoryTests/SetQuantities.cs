@@ -3,11 +3,11 @@ using System.Threading.Tasks;
 using eCommerce.ComputerParts.Shop.Catalog;
 using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Services;
+using eCommerce.ComputerParts.Shop.UnitTests.Builders;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.UnitTests.Builders;
 using Xunit;
 
-namespace Microsoft.eShopWeb.IntegrationTests.Repositories.BasketRepositoryTests;
+namespace eCommerce.ComputerParts.Shop.IntegrationTests.Repositories.BasketRepositoryTests;
 
 public class SetQuantities
 {

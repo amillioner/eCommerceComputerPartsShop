@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Extensions;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Extensions;
 
 [DebuggerDisplay("Id={Id}, Date={Date}")]
 public class TestChild : IEquatable<TestChild>

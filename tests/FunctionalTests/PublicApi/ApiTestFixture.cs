@@ -1,13 +1,12 @@
 ﻿using eCommerce.ComputerParts.Shop.Catalog;
 using eCommerce.ComputerParts.Shop.Identity;
 using eCommerce.ComputerParts.Shop.Service.AuthEndpoints;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Microsoft.eShopWeb.FunctionalTests.PublicApi;
+namespace eCommerce.ComputerParts.Shop.FunctionalTests.PublicApi;
 
 public class TestApiApplication : WebApplicationFactory<AuthenticateEndpoint>
 {

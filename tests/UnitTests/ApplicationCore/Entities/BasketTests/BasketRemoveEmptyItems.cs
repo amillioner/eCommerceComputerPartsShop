@@ -1,7 +1,7 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.BasketTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Entities.BasketTests;
 
 public class BasketRemoveEmptyItems
 {

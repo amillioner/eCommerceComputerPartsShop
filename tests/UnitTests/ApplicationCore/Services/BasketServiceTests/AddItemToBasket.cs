@@ -5,7 +5,7 @@ using eCommerce.ComputerParts.Shop.Core.Specifications;
 using NSubstitute;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Services.BasketServiceTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Services.BasketServiceTests;
 
 public class AddItemToBasket
 {

@@ -1,11 +1,11 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Core.Services;
-//using Moq;
 using NSubstitute;
 using Xunit;
+//using Moq;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Services.BasketServiceTests;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Services.BasketServiceTests;
 
 public class DeleteBasket
 {

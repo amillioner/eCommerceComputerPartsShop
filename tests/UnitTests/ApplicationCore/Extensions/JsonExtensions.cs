@@ -1,7 +1,7 @@
 ﻿using eCommerce.ComputerParts.Shop.Core.Extensions;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Extensions;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Extensions;
 
 public class JsonExtensions
 {

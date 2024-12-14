@@ -2,7 +2,7 @@
 using NSubstitute;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications;
+namespace eCommerce.ComputerParts.Shop.UnitTests.ApplicationCore.Specifications;
 
 public class CatalogItemsSpecification
 {
