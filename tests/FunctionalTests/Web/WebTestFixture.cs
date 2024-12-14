@@ -1,4 +1,4 @@
-﻿using eCommerce.ComputerParts.Shop.Data;
+﻿using eCommerce.ComputerParts.Shop.Catalog;
 using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;

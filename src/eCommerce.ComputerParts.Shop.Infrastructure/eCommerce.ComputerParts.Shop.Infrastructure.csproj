@@ -1,7 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<ItemGroup>
-	  <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
-	  <ProjectReference Include="..\eCommerce.ComputerParts.Shop.Web.Shared\eCommerce.ComputerParts.Shop.Web.Shared.csproj" />
-	</ItemGroup>
-</Project>

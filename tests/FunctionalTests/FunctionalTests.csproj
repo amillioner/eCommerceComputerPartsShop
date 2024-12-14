@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\eCommerce.ComputerParts.Shop.Service\eCommerce.ComputerParts.Shop.Service.csproj" />
-    <ProjectReference Include="..\..\src\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj" />
+    <ProjectReference Include="..\..\src\Backend\eCommerce.ComputerParts.Shop.Service\eCommerce.ComputerParts.Shop.Service.csproj" />
+    <ProjectReference Include="..\..\src\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj" />
+    <ProjectReference Include="..\..\src\frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
