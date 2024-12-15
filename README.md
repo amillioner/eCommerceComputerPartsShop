@@ -41,8 +41,12 @@ You can also run the samples in Docker (see below).
     ```
     dotnet restore
     dotnet tool restore
-    dotnet ef database update -c catalogcontext -p ..\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj -s .\eCommerce.ComputerParts.Shop.Web.csproj
-    dotnet ef database update -c appidentitydbcontext -p ..\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj -s .\eCommerce.ComputerParts.Shop.Web.csproj
+    dotnet ef database update -c catalogcontext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj 
+    dotnet ef database update -c appidentitydbcontext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj 
+
+
+    dotnet ef migrations add InitialDataModel --context CatalogContext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
+    dotnet ef migrations add InitialIdentityModel --context appidentitydbcontext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
 
     dotnet ef migrations remove -s .\src\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj
  
@@ -58,9 +62,11 @@ You can also run the samples in Docker (see below).
 
     ```
     -- create migration (from Web folder CLI)
-    dotnet ef migrations add InitialDataModel --context catalogcontext -p ..\eCommerce.ComputerParts.Shop.Data\eCommerce.ComputerParts.Shop.Data.csproj -s .\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
-    dotnet ef migrations add InitialIdentityModel --context appidentitydbcontext -p ..\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj -s .\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
-    
+
+    dotnet ef migrations add InitialDataModel --context CatalogContext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
+    dotnet ef migrations add InitialIdentityModel --context appidentitydbcontext -p C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Data\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj -s C:\Users\anwar\source\repos\eCommerceComputerPartsShop\src\Frontend\eCommerce.ComputerParts.Shop.Web\eCommerce.ComputerParts.Shop.Web.csproj -o Migrations
+
+
     ```
 
 ## Running the sample in the dev container
