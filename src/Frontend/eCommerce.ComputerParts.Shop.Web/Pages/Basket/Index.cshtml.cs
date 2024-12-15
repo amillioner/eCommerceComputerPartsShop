@@ -28,7 +28,7 @@ public class IndexModel : PageModel
         _itemRepository = itemRepository;
     }
 
-    public BasketViewModel BasketModel { get; set; } = new BasketViewModel();
+    public BasketViewModel BasketModel { get; set; } = new();
 
     public async Task OnGet()
     {
@@ -87,13 +87,17 @@ public class IndexModel : PageModel
 
             if (!Request.HttpContext.User.Identity.IsAuthenticated)
             {
-                if (!Guid.TryParse(userName, out var _))
+                if (!Guid.TryParse(userName, out _))
                 {
                     userName = null;
                 }
             }
         }
-        if (userName != null) return userName;
+
+        if (userName != null)
+        {
+            return userName;
+        }
 
         userName = Guid.NewGuid().ToString();
         var cookieOptions = new CookieOptions { IsEssential = true };

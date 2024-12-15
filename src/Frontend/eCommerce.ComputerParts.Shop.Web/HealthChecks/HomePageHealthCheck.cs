@@ -17,10 +17,10 @@ public class HomePageHealthCheck : IHealthCheck
 
     public async Task<HealthCheckResult> CheckHealthAsync(
         HealthCheckContext context,
-        CancellationToken cancellationToken = default(CancellationToken))
+        CancellationToken cancellationToken = default)
     {
         var request = _httpContextAccessor.HttpContext?.Request;
-        string myUrl = request?.Scheme + "://" + request?.Host.ToString();
+        var myUrl = request?.Scheme + "://" + request?.Host;
 
         var client = new HttpClient();
         var response = await client.GetAsync(myUrl);

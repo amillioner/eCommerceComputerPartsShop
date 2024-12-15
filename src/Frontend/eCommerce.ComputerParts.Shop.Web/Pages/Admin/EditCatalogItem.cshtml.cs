@@ -17,8 +17,7 @@ public class EditCatalogItemModel : PageModel
         _catalogItemViewModelService = catalogItemViewModelService;
     }
 
-    [BindProperty]
-    public CatalogItemViewModel CatalogModel { get; set; } = new CatalogItemViewModel();
+    [BindProperty] public CatalogItemViewModel CatalogModel { get; set; } = new();
 
     public void OnGet(CatalogItemViewModel catalogModel)
     {

@@ -15,10 +15,10 @@ namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account;
 [AllowAnonymous]
 public class RegisterModel : PageModel
 {
+    private readonly IEmailSender _emailSender;
+    private readonly ILogger<RegisterModel> _logger;
     private readonly SignInManager<ApplicationUser> _signInManager;
     private readonly UserManager<ApplicationUser> _userManager;
-    private readonly ILogger<RegisterModel> _logger;
-    private readonly IEmailSender _emailSender;
 
     public RegisterModel(
         UserManager<ApplicationUser> userManager,
@@ -32,29 +32,9 @@ public class RegisterModel : PageModel
         _emailSender = emailSender;
     }
 
-    [BindProperty]
-    public required InputModel Input { get; set; }
+    [BindProperty] public required InputModel Input { get; set; }
 
     public string? ReturnUrl { get; set; }
-
-    public class InputModel
-    {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
-        public string? Email { get; set; }
-
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        public string? Password { get; set; }
-
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string? ConfirmPassword { get; set; }
-    }
 
     public void OnGet(string? returnUrl = null)
     {
@@ -75,17 +55,18 @@ public class RegisterModel : PageModel
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var callbackUrl = Url.Page(
                     "/Account/ConfirmEmail",
-                    pageHandler: null,
-                    values: new { userId = user.Id, code = code },
-                    protocol: Request.Scheme);
+                    null,
+                    new { userId = user.Id, code },
+                    Request.Scheme);
 
                 Guard.Against.Null(callbackUrl, nameof(callbackUrl));
                 await _emailSender.SendEmailAsync(Input!.Email!, "Confirm your email",
                     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                await _signInManager.SignInAsync(user, isPersistent: false);
+                await _signInManager.SignInAsync(user, false);
                 return LocalRedirect(returnUrl);
             }
+
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError(string.Empty, error.Description);
@@ -94,5 +75,25 @@ public class RegisterModel : PageModel
 
         // If we got this far, something failed, redisplay form
         return Page();
+    }
+
+    public class InputModel
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string? Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
+            MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string? Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string? ConfirmPassword { get; set; }
     }
 }

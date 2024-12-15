@@ -42,15 +42,18 @@ else
 {
     // Configure SQL Server (prod)
     var credential = new ChainedTokenCredential(new AzureDeveloperCliCredential(), new DefaultAzureCredential());
-    builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["AZURE_KEY_VAULT_ENDPOINT"] ?? ""), credential);
+    builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["AZURE_KEY_VAULT_ENDPOINT"] ?? ""),
+        credential);
     builder.Services.AddDbContext<CatalogContext>(c =>
     {
-        var connectionString = builder.Configuration[builder.Configuration["AZURE_SQL_CATALOG_CONNECTION_STRING_KEY"] ?? ""];
+        var connectionString =
+            builder.Configuration[builder.Configuration["AZURE_SQL_CATALOG_CONNECTION_STRING_KEY"] ?? ""];
         c.UseSqlServer(connectionString, sqlOptions => sqlOptions.EnableRetryOnFailure());
     });
     builder.Services.AddDbContext<AppIdentityDbContext>(options =>
     {
-        var connectionString = builder.Configuration[builder.Configuration["AZURE_SQL_IDENTITY_CONNECTION_STRING_KEY"] ?? ""];
+        var connectionString =
+            builder.Configuration[builder.Configuration["AZURE_SQL_IDENTITY_CONNECTION_STRING_KEY"] ?? ""];
         options.UseSqlServer(connectionString, sqlOptions => sqlOptions.EnableRetryOnFailure());
     });
 }
@@ -66,9 +69,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-           .AddDefaultUI()
-           .AddEntityFrameworkStores<AppIdentityDbContext>()
-                           .AddDefaultTokenProviders();
+    .AddDefaultUI()
+    .AddEntityFrameworkStores<AppIdentityDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<ITokenClaimsService, IdentityTokenClaimService>();
 builder.Configuration.AddEnvironmentVariables();
@@ -87,8 +90,7 @@ builder.Services.AddRouting(options =>
 builder.Services.AddMvc(options =>
 {
     options.Conventions.Add(new RouteTokenTransformerConvention(
-             new SlugifyParameterTransformer()));
-
+        new SlugifyParameterTransformer()));
 });
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages(options =>
@@ -112,10 +114,7 @@ builder.Services.Configure<BaseUrlConfiguration>(configSection);
 var baseUrlConfig = configSection.Get<BaseUrlConfiguration>();
 
 // Blazor Admin Required Services for Prerendering
-builder.Services.AddScoped<HttpClient>(s => new HttpClient
-{
-    BaseAddress = new Uri(baseUrlConfig!.WebBase)
-});
+builder.Services.AddScoped(s => new HttpClient { BaseAddress = new Uri(baseUrlConfig!.WebBase) });
 
 // add blazor services
 builder.Services.AddBlazoredLocalStorage();
@@ -206,8 +205,10 @@ app.UseAuthorization();
 
 app.MapControllerRoute("default", "{controller:slugify=Home}/{action:slugify=Index}/{id?}");
 app.MapRazorPages();
-app.MapHealthChecks("home_page_health_check", new HealthCheckOptions { Predicate = check => check.Tags.Contains("homePageHealthCheck") });
-app.MapHealthChecks("api_health_check", new HealthCheckOptions { Predicate = check => check.Tags.Contains("apiHealthCheck") });
+app.MapHealthChecks("home_page_health_check",
+    new HealthCheckOptions { Predicate = check => check.Tags.Contains("homePageHealthCheck") });
+app.MapHealthChecks("api_health_check",
+    new HealthCheckOptions { Predicate = check => check.Tags.Contains("apiHealthCheck") });
 //endpoints.MapBlazorHub("/admin");
 app.MapFallbackToFile("index.html");
 

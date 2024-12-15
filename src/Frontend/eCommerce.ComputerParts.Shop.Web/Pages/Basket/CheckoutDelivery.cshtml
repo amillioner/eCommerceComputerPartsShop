@@ -1,0 +1,122 @@
+﻿@page
+@model CheckoutDeliveryModel
+@{
+    ViewData["Title"] = "Checkout - Delivery";
+}
+
+<div class="container">
+    <h1>Checkout - Delivery</h1>
+
+    <!-- Step Navigation Tabs -->
+    <div class="esh-steps row mb-4">
+        <div class="esh-step">ADDRESS</div>
+        <div class="esh-step esh-step-active">DELIVERY</div>
+        <div class="esh-step">PAYMENT</div>
+    </div>
+
+    <!-- Delivery Options -->
+    <form method="post">
+        <h3 class="mb-3">Choose Delivery Option</h3>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" id="ups1" name="DeliveryOption" value="10">
+            <label class="form-check-label" for="ups1">
+                <strong>UPS1 - $10.00</strong><br>
+                Fastest delivery time
+            </label>
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" id="ups3" name="DeliveryOption" value="2">
+            <label class="form-check-label" for="ups3">
+                <strong>UPS3 - $2.00</strong><br>
+                Slower but cheap
+            </label>
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" id="ups2" name="DeliveryOption" value="5">
+            <label class="form-check-label" for="ups2">
+                <strong>UPS2 - $5.00</strong><br>
+                Get it within 5 days
+            </label>
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" id="free" name="DeliveryOption" value="0">
+            <label class="form-check-label" for="free">
+                <strong>FREE - $0.00</strong><br>
+                Free! You get what you pay for
+            </label>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="esh-summary mt-5">
+            <h3>Order Summary</h3>
+            <div class="row">
+                <div class="col-md-9">Order Subtotal</div>
+                <div class="col-md-3 text-right">$ @Model.BasketModel.Total().ToString("N2")</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Shipping and Handling</div>
+                <div class="col-md-3 text-right">$10.00</div>
+            </div>
+            <hr/>
+            <div class="row font-weight-bold">
+                <div class="col-md-9">Total</div>
+                <div class="col-md-3 text-right">
+                    @if (Model.SelectedDeliveryOption != null)
+                    {
+                        @($"${Model.SelectedDeliveryOption}")
+                    }
+                    else
+                    {
+                        @("$180.00")
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="esh-navigation mt-4">
+            <a asp-page="./CheckoutShipping" class="btn btn-outline-secondary">&lt; Back to Address</a>
+            <a asp-page="./CheckoutPayment" class="btn btn-warning float-right">Go to Payment &gt;</a>
+        </div>
+    </form>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    .esh-steps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .esh-step {
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+        background: #f2f2f2;
+        margin-right: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .esh-step-active {
+        background: orange;
+        color: white;
+    }
+
+    .esh-summary {
+        border-top: 2px solid #ddd;
+        padding-top: 15px;
+    }
+
+    .esh-navigation .btn {
+        padding: 10px 20px;
+    }
+
+    .form-check-label strong {
+        font-size: 1.1em;
+    }
+</style>

@@ -47,7 +47,7 @@
                 <section class="esh-orders-detail-title col-xs-12">ORDER DETAILS</section>
             </article>
 
-            @for (int i = 0; i < Model.OrderItems.Count; i++)
+            @for (var i = 0; i < Model.OrderItems.Count; i++)
             {
                 var item = Model.OrderItems[i];
                 <article class="esh-orders-detail-items esh-orders-detail-items--border row">

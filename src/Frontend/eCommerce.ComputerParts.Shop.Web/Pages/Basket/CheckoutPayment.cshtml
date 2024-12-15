@@ -1,0 +1,120 @@
+﻿@page
+@model CheckoutPaymentModel
+@{
+    ViewData["Title"] = "Checkout - Payment";
+}
+
+<div class="container">
+    <h1>Checkout - Payment</h1>
+
+    <!-- Step Navigation Tabs -->
+    <div class="esh-steps row mb-4">
+        <div class="esh-step">ADDRESS</div>
+        <div class="esh-step">DELIVERY</div>
+        <div class="esh-step esh-step-active">PAYMENT</div>
+    </div>
+
+    <!-- Payment Form -->
+    <form method="post">
+        <h3 class="mb-4">Enter Payment Details</h3>
+
+        <div class="form-group">
+            <label for="NameOnCard">Name on Card</label>
+            <input type="text" class="form-control" id="NameOnCard" name="NameOnCard" placeholder="Enter name as on card" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="CardNumber">Card Number</label>
+                <input type="text" class="form-control" id="CardNumber" name="CardNumber" placeholder="1234 1234 1234 1234" maxlength="19" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="CardExpiry">Card Expiry</label>
+                <input type="text" class="form-control" id="CardExpiry" name="CardExpiry" placeholder="MM / YY" maxlength="7" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="CardCVC">Card CVC</label>
+                <input type="text" class="form-control" id="CardCVC" name="CardCVC" placeholder="CVC" maxlength="3" required>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="esh-summary mt-5">
+            <h3>Order Summary</h3>
+            <div class="row">
+                <div class="col-md-9">Order Subtotal</div>
+                <div class="col-md-3 text-right">$ @Model.BasketModel.Total().ToString("N2")</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Shipping and Handling</div>
+                <div class="col-md-3 text-right">$10.00</div>
+            </div>
+            <hr/>
+            <div class="row font-weight-bold">
+                <div class="col-md-9">Total</div>
+                <div class="col-md-3 text-right">$190.00</div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="esh-navigation mt-4">
+            <a asp-page="./CheckoutDelivery" class="btn btn-outline-secondary">&lt; Back to Payment</a>
+            <button type="submit" class="btn btn-warning float-right">Submit Order &gt;</button>
+        </div>
+    </form>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    .esh-steps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .esh-step {
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+        background: #f2f2f2;
+        margin-right: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .esh-step-active {
+        background: orange;
+        color: white;
+    }
+
+    .esh-summary {
+        border-top: 2px solid #ddd;
+        padding-top: 15px;
+    }
+
+    .esh-navigation .btn {
+        padding: 10px 20px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+</style>
+
+<!-- Optional Scripts -->
+<script>
+    // Optional: Auto-format card input fields
+    document.getElementById('CardNumber').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, '');
+        let formatted = value.match(/.{1,4}/g);
+        e.target.value = formatted ? formatted.join(' ') : '';
+    });
+
+    document.getElementById('CardExpiry').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/[^0-9]/g, '');
+        if (value.length >= 2) {
+            e.target.value = value.slice(0, 2) + ' / ' + value.slice(2, 4);
+        } else {
+            e.target.value = value;
+        }
+    });
+</script>

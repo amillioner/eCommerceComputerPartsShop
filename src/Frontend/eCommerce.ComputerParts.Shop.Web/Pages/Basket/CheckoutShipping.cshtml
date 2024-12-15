@@ -1,0 +1,125 @@
+﻿@page
+@model CheckoutShippingModel
+@{
+    ViewData["Title"] = "Checkout - Shipping Address";
+}
+
+<div class="container">
+    <h1>Checkout - Shipping Address</h1>
+
+    <!-- Step Navigation Tabs -->
+    <div class="esh-steps row mb-4">
+        <div class="esh-step esh-step-active">ADDRESS</div>
+        <div class="esh-step">DELIVERY</div>
+        <div class="esh-step">PAYMENT</div>
+    </div>
+
+    <!-- Shipping Address Form -->
+    <form method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input asp-for="ShippingAddress.FirstName" class="form-control" placeholder="Enter your first name"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="LastName">Last Name</label>
+                    <input asp-for="ShippingAddress.LastName" class="form-control" placeholder="Enter your last name"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Street">Street</label>
+                    <input asp-for="ShippingAddress.Street" class="form-control" placeholder="Enter your street"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input asp-for="ShippingAddress.City" class="form-control" placeholder="Enter your city"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="State">State</label>
+                    <input asp-for="ShippingAddress.State" class="form-control" placeholder="Enter your state"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="ZipCode">Zip Code</label>
+                    <input asp-for="ShippingAddress.ZipCode" class="form-control" placeholder="Enter zip code"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <button type="submit" class="btn btn-success">Save As Default Address</button>
+        </div>
+    </form>
+
+    <!-- Order Summary Section -->
+    <div class="esh-summary mt-5">
+        <h3>Order Summary</h3>
+        <div class="row">
+            <div class="col-md-9">Order Subtotal</div>
+            <div class="col-md-3 text-right">$ @Model.BasketModel.Total().ToString("N2")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">Shipping and Handling</div>
+            <div class="col-md-3 text-right">$0.00</div>
+        </div>
+        <hr/>
+        <div class="row font-weight-bold">
+            <div class="col-md-9">Total</div>
+            <div class="col-md-3 text-right">$180.00</div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="esh-navigation mt-4">
+        <a asp-page="/Basket/Checkout" class="btn btn-outline-secondary">&lt; Back</a>
+        <a asp-page="./CheckoutDelivery" class="btn btn-warning float-right">Go to Delivery &gt;</a>
+    </div>
+</div>
+
+<style>
+    .esh-steps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .esh-step {
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+        background: #f2f2f2;
+        margin-right: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .esh-step-active {
+        background: orange;
+        color: white;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .esh-summary {
+        border-top: 2px solid #ddd;
+        padding-top: 15px;
+    }
+
+    .esh-navigation .btn {
+        padding: 10px 20px;
+    }
+</style>

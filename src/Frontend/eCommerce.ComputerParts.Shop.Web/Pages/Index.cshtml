@@ -12,24 +12,24 @@
             <label class="esh-catalog-label" data-title="type">
                 <select asp-for="@Model.CatalogModel.TypesFilterApplied" asp-items="@Model.CatalogModel.Types" class="esh-catalog-filter"></select>
             </label>
-            <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
+            <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg"/>
         </form>
     </div>
 </section>
 <div class="container">
     @if (Model.CatalogModel.CatalogItems.Any())
     {
-        <partial name="_pagination" for="CatalogModel.PaginationInfo" />
+        <partial name="_pagination" for="CatalogModel.PaginationInfo"/>
 
         <div class="esh-catalog-items row">
             @foreach (var catalogItem in Model.CatalogModel.CatalogItems)
             {
                 <div class="esh-catalog-item col-md-4">
-                    <partial name="_product" for="@catalogItem" />
+                    <partial name="_product" for="@catalogItem"/>
                 </div>
             }
         </div>
-        <partial name="_pagination" for="CatalogModel.PaginationInfo" />
+        <partial name="_pagination" for="CatalogModel.PaginationInfo"/>
     }
     else
     {

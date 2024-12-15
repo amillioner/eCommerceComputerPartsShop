@@ -29,7 +29,8 @@ public static class ConfigureCookieSettings
             options.Cookie = new CookieBuilder
             {
                 Name = IdentifierCookieName,
-                IsEssential = true // required for auth to work without explicit user consent; adjust to suit your privacy policy
+                IsEssential =
+                    true // required for auth to work without explicit user consent; adjust to suit your privacy policy
             };
         });
 

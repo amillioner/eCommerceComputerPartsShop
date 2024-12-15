@@ -18,40 +18,25 @@ namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account;
 [AllowAnonymous]
 public class LoginModel : PageModel
 {
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly ILogger<LoginModel> _logger;
     private readonly IBasketService _basketService;
+    private readonly ILogger<LoginModel> _logger;
+    private readonly SignInManager<ApplicationUser> _signInManager;
 
-    public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, IBasketService basketService)
+    public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger,
+        IBasketService basketService)
     {
         _signInManager = signInManager;
         _logger = logger;
         _basketService = basketService;
     }
 
-    [BindProperty]
-    public required InputModel Input { get; set; }
+    [BindProperty] public required InputModel Input { get; set; }
 
     public IList<AuthenticationScheme>? ExternalLogins { get; set; }
 
     public string? ReturnUrl { get; set; }
 
-    [TempData]
-    public string? ErrorMessage { get; set; }
-
-    public class InputModel
-    {
-        [Required]
-        [EmailAddress]
-        public string? Email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        public string? Password { get; set; }
-
-        [Display(Name = "Remember me?")]
-        public bool RememberMe { get; set; }
-    }
+    [TempData] public string? ErrorMessage { get; set; }
 
     public async Task OnGetAsync(string? returnUrl = null)
     {
@@ -88,20 +73,20 @@ public class LoginModel : PageModel
                 await TransferAnonymousBasketToUserAsync(Input?.Email);
                 return LocalRedirect(returnUrl);
             }
+
             if (result.RequiresTwoFactor)
             {
-                return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input?.RememberMe });
+                return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, Input?.RememberMe });
             }
+
             if (result.IsLockedOut)
             {
                 _logger.LogWarning("User account locked out.");
                 return RedirectToPage("./Lockout");
             }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return Page();
-            }
+
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return Page();
         }
 
         // If we got this far, something failed, redisplay form
@@ -113,12 +98,24 @@ public class LoginModel : PageModel
         if (Request.Cookies.ContainsKey(Constants.BASKET_COOKIENAME))
         {
             var anonymousId = Request.Cookies[Constants.BASKET_COOKIENAME];
-            if (Guid.TryParse(anonymousId, out var _))
+            if (Guid.TryParse(anonymousId, out _))
             {
                 Guard.Against.NullOrEmpty(userName, nameof(userName));
                 await _basketService.TransferBasketAsync(anonymousId, userName);
             }
+
             Response.Cookies.Delete(Constants.BASKET_COOKIENAME);
         }
+    }
+
+    public class InputModel
+    {
+        [Required][EmailAddress] public string? Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string? Password { get; set; }
+
+        [Display(Name = "Remember me?")] public bool RememberMe { get; set; }
     }
 }

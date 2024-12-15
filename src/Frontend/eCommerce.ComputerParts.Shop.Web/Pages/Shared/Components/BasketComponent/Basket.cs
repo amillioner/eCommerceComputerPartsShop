@@ -15,7 +15,7 @@ public class Basket : ViewComponent
     private readonly SignInManager<ApplicationUser> _signInManager;
 
     public Basket(IBasketViewModelService basketService,
-                    SignInManager<ApplicationUser> signInManager)
+        SignInManager<ApplicationUser> signInManager)
     {
         _basketService = basketService;
         _signInManager = signInManager;
@@ -23,10 +23,7 @@ public class Basket : ViewComponent
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        var vm = new BasketComponentViewModel
-        {
-            ItemsCount = await CountTotalBasketItems()
-        };
+        var vm = new BasketComponentViewModel { ItemsCount = await CountTotalBasketItems() };
         return View(vm);
     }
 
@@ -38,9 +35,11 @@ public class Basket : ViewComponent
             return await _basketService.CountTotalBasketItems(User.Identity.Name);
         }
 
-        string? anonymousId = GetAnnonymousIdFromCookie();
+        var anonymousId = GetAnnonymousIdFromCookie();
         if (anonymousId == null)
+        {
             return 0;
+        }
 
         return await _basketService.CountTotalBasketItems(anonymousId);
     }
@@ -51,11 +50,12 @@ public class Basket : ViewComponent
         {
             var id = Request.Cookies[Constants.BASKET_COOKIENAME];
 
-            if (Guid.TryParse(id, out var _))
+            if (Guid.TryParse(id, out _))
             {
                 return id;
             }
         }
+
         return null;
     }
 }

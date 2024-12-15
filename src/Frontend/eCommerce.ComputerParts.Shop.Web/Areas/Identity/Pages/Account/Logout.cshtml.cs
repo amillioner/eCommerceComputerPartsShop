@@ -17,9 +17,9 @@ namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account;
 //TODO : replace IMemoryCache by distributed cache if you are in multi-host scenario
 public class LogoutModel : PageModel
 {
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly ILogger<LogoutModel> _logger;
     private readonly IMemoryCache _cache;
+    private readonly ILogger<LogoutModel> _logger;
+    private readonly SignInManager<ApplicationUser> _signInManager;
 
     public LogoutModel(SignInManager<ApplicationUser> signInManager, ILogger<LogoutModel> logger, IMemoryCache cache)
     {
@@ -38,19 +38,18 @@ public class LogoutModel : PageModel
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         var userId = _signInManager.Context.User.Claims.First(c => c.Type == ClaimTypes.Name);
         var identityKey = _signInManager.Context.Request.Cookies[ConfigureCookieSettings.IdentifierCookieName];
-        _cache.Set($"{userId.Value}:{identityKey}", identityKey, new MemoryCacheEntryOptions
-        {
-            AbsoluteExpiration = DateTime.Now.AddMinutes(ConfigureCookieSettings.ValidityMinutesPeriod)
-        });
+        _cache.Set($"{userId.Value}:{identityKey}", identityKey,
+            new MemoryCacheEntryOptions
+            {
+                AbsoluteExpiration = DateTime.Now.AddMinutes(ConfigureCookieSettings.ValidityMinutesPeriod)
+            });
 
         _logger.LogInformation("User logged out.");
         if (returnUrl != null)
         {
             return LocalRedirect(returnUrl);
         }
-        else
-        {
-            return RedirectToPage("/Index");
-        }
+
+        return RedirectToPage("/Index");
     }
 }

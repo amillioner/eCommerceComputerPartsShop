@@ -21,15 +21,15 @@ namespace Microsoft.eShopWeb.Web.Controllers;
 [ApiController]
 public class UserController : ControllerBase
 {
-    private readonly ITokenClaimsService _tokenClaimsService;
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly ILogger<UserController> _logger;
     private readonly IMemoryCache _cache;
+    private readonly ILogger<UserController> _logger;
+    private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly ITokenClaimsService _tokenClaimsService;
 
     public UserController(ITokenClaimsService tokenClaimsService,
-                          SignInManager<ApplicationUser> signInManager,
-                          ILogger<UserController> logger,
-                          IMemoryCache cache)
+        SignInManager<ApplicationUser> signInManager,
+        ILogger<UserController> logger,
+        IMemoryCache cache)
     {
         _tokenClaimsService = tokenClaimsService;
         _signInManager = signInManager;
@@ -40,8 +40,10 @@ public class UserController : ControllerBase
     [HttpGet]
     [Authorize]
     [AllowAnonymous]
-    public async Task<IActionResult> GetCurrentUser() =>
-        Ok(await CreateUserInfo(User));
+    public async Task<IActionResult> GetCurrentUser()
+    {
+        return Ok(await CreateUserInfo(User));
+    }
 
     [Route("Logout")]
     [HttpPost]
@@ -53,10 +55,11 @@ public class UserController : ControllerBase
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         var userId = _signInManager.Context.User.Claims.First(c => c.Type == ClaimTypes.Name);
         var identityKey = _signInManager.Context.Request.Cookies[ConfigureCookieSettings.IdentifierCookieName];
-        _cache.Set($"{userId.Value}:{identityKey}", identityKey, new MemoryCacheEntryOptions
-        {
-            AbsoluteExpiration = DateTime.Now.AddMinutes(ConfigureCookieSettings.ValidityMinutesPeriod)
-        });
+        _cache.Set($"{userId.Value}:{identityKey}", identityKey,
+            new MemoryCacheEntryOptions
+            {
+                AbsoluteExpiration = DateTime.Now.AddMinutes(ConfigureCookieSettings.ValidityMinutesPeriod)
+            });
 
         _logger.LogInformation("User logged out.");
         return Ok();
@@ -64,15 +67,13 @@ public class UserController : ControllerBase
 
     private async Task<UserInfo> CreateUserInfo(ClaimsPrincipal claimsPrincipal)
     {
-        if (claimsPrincipal.Identity == null || claimsPrincipal.Identity.Name == null || !claimsPrincipal.Identity.IsAuthenticated)
+        if (claimsPrincipal.Identity == null || claimsPrincipal.Identity.Name == null ||
+            !claimsPrincipal.Identity.IsAuthenticated)
         {
             return UserInfo.Anonymous;
         }
 
-        var userInfo = new UserInfo
-        {
-            IsAuthenticated = true
-        };
+        var userInfo = new UserInfo { IsAuthenticated = true };
 
         if (claimsPrincipal.Identity is ClaimsIdentity claimsIdentity)
         {
