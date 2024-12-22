@@ -51,10 +51,6 @@ public class CreateCatalogItemEndpoint : IEndpoint<IResult, CreateCatalogItemReq
 
         if (newItem.Id != 0)
         {
-            //We disabled the upload functionality and added a default/placeholder image to this sample due to a potential security risk 
-            //  pointed out by the community. More info in this issue: https://github.com/dotnet-architecture/eShopOnWeb/issues/537 
-            //  In production, we recommend uploading to a blob storage and deliver the image via CDN after a verification process.
-
             newItem.UpdatePictureUri("eCatalog-item-default.png");
             await itemRepository.UpdateAsync(newItem);
         }
