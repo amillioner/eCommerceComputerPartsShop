@@ -36,7 +36,7 @@ public class CheckoutDeliveryModel : PageModel
     }
 
     public BasketViewModel BasketModel { get; set; } = new();
-    public object SelectedDeliveryOption { get; set; }
+    public string ShippingAndHandling { get; set; }
 
     public async Task OnGet()
     {

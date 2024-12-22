@@ -15,7 +15,7 @@
     </div>
 
     <!-- Delivery Options -->
-    <form method="post">
+    <form method="post" id="deliveryForm">
         <h3 class="mb-3">Choose Delivery Option</h3>
 
         <div class="form-check mb-3">
@@ -55,25 +55,16 @@
             <h3>Order Summary</h3>
             <div class="row">
                 <div class="col-md-9">Order Subtotal</div>
-                <div class="col-md-3 text-right">$ @Model.BasketModel.Total().ToString("N2")</div>
+                <div class="col-md-3 text-right" id="orderSubtotal">$@Model.BasketModel.Total().ToString("N2")</div>
             </div>
             <div class="row">
                 <div class="col-md-9">Shipping and Handling</div>
-                <div class="col-md-3 text-right">$10.00</div>
+                <div class="col-md-3 text-right" id="shippingCost">$@Model.BasketModel.ShippingCost.ToString("N2")</div>
             </div>
-            <hr/>
+            <hr />
             <div class="row font-weight-bold">
                 <div class="col-md-9">Total</div>
-                <div class="col-md-3 text-right">
-                    @if (Model.SelectedDeliveryOption != null)
-                    {
-                        @($"${Model.SelectedDeliveryOption}")
-                    }
-                    else
-                    {
-                        @("$180.00")
-                    }
-                </div>
+                <div class="col-md-3 text-right" id="totalAmount">$@Model.BasketModel.GrandTotal().ToString("N2")</div>
             </div>
         </div>
 
@@ -84,6 +75,47 @@
         </div>
     </form>
 </div>
+
+<!-- JavaScript for Validation and Dynamic Total Calculation -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deliveryOptions = document.getElementsByName("DeliveryOption");
+        const orderSubtotal = @Model.BasketModel.Total(); // Order Subtotal from Model
+        const shippingCostDisplay = document.getElementById("shippingCost");
+        const totalAmountDisplay = document.getElementById("totalAmount");
+        const continueButton = document.getElementById("continueToPayment");
+
+        let shippingCost = 0;
+
+        // Update Shipping and Total when a delivery option is selected
+        for (const option of deliveryOptions) {
+            option.addEventListener("change", function () {
+                shippingCost = parseFloat(this.value);
+                shippingCostDisplay.textContent = `$${shippingCost.toFixed(2)}`;
+                const total = orderSubtotal + shippingCost;
+                totalAmountDisplay.textContent = `$${total.toFixed(2)}`;
+            });
+        }
+
+        // Prevent proceeding without selecting a delivery option
+        continueButton.addEventListener("click", function (e) {
+            let isSelected = false;
+
+            for (const option of deliveryOptions) {
+                if (option.checked) {
+                    isSelected = true;
+                    break;
+                }
+            }
+
+            if (!isSelected) {
+                alert("Please select a delivery option before proceeding.");
+            } else {
+                document.getElementById("deliveryForm").submit();
+            }
+        });
+    });
+</script>
 
 <!-- Custom Styles -->
 <style>

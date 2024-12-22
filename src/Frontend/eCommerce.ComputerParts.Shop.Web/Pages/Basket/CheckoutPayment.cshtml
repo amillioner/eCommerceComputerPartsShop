@@ -47,12 +47,12 @@
             </div>
             <div class="row">
                 <div class="col-md-9">Shipping and Handling</div>
-                <div class="col-md-3 text-right">$10.00</div>
+                <div class="col-md-3 text-right" id="shippingCost">$@Model.BasketModel.ShippingCost.ToString("N2")</div>
             </div>
-            <hr/>
+            <hr />
             <div class="row font-weight-bold">
                 <div class="col-md-9">Total</div>
-                <div class="col-md-3 text-right">$190.00</div>
+                <div class="col-md-3 text-right" id="totalAmount">$@Model.BasketModel.GrandTotal().ToString("N2")</div>
             </div>
         </div>
 

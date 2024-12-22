@@ -27,10 +27,7 @@ public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<Order
 
         return orders.Select(o => new OrderViewModel
         {
-            OrderDate = o.OrderDate,
-            OrderNumber = o.Id,
-            ShippingAddress = o.ShipToAddress,
-            Total = o.Total()
+            OrderDate = o.OrderDate, OrderNumber = o.Id, ShippingAddress = o.ShipToAddress, Total = o.Total()
         });
     }
 }

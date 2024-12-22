@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
+using eCommerce.ComputerParts.Shop.Core.Entities.BasketAggregate;
 using eCommerce.ComputerParts.Shop.Core.Interfaces;
 using eCommerce.ComputerParts.Shop.Identity;
 using Microsoft.AspNetCore.Authorization;
@@ -37,20 +39,21 @@ public class CheckoutShippingModel : PageModel
 
     public BasketViewModel BasketModel { get; set; } = new();
 
-    [BindProperty] public ShippingAddressModel ShippingAddress { get; set; }
+    [BindProperty] public ShippingAddress ShippingAddress { get; set; }
 
     public async Task OnGet()
     {
-        // Default values for demonstration
-        ShippingAddress = new ShippingAddressModel
-        {
-            FirstName = "Bob",
-            LastName = "Bobbity",
-            Street = "10 The street",
-            City = "New York",
-            State = "NY",
-            ZipCode = "90210"
-        };
+        //// Default values for demonstration
+        //var shippingAddress = new ShippingAddress
+        //{
+        //    FirstName = "Bob",
+        //    LastName = "Bobbity",
+        //    Street = "10 The street",
+        //    City = "New York",
+        //    State = "NY",
+        //    ZipCode = "90210"
+        //};
+        //BasketModel.ShippingAddress = ShippingAddress;
 
         await SetBasketModelAsync();
     }
@@ -92,19 +95,11 @@ public class CheckoutShippingModel : PageModel
         {
             // Process form submission (e.g., save address to database)
             TempData["Message"] = "Address saved as default!";
-            return Page();
+            return RedirectToPage();
         }
 
-        return Page();
-    }
+        BasketModel.ShippingAddress = ShippingAddress;
 
-    public class ShippingAddressModel
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string ZipCode { get; set; }
+        return RedirectToPage();
     }
 }

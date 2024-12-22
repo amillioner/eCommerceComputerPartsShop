@@ -46,9 +46,7 @@ public class BasketViewModelService : IBasketViewModelService
     {
         return new BasketViewModel
         {
-            BuyerId = basket.BuyerId,
-            Id = basket.Id,
-            Items = await GetBasketItems(basket.Items)
+            BuyerId = basket.BuyerId, Id = basket.Id, Items = await GetBasketItems(basket.Items)
         };
     }
 

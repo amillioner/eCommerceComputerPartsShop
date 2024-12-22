@@ -12,7 +12,6 @@ public class Basket : BaseEntity, IAggregateRoot
 
     public int TotalItems => _items.Sum(i => i.Quantity);
 
-
     public Basket(string buyerId)
     {
         BuyerId = buyerId;
@@ -20,7 +19,7 @@ public class Basket : BaseEntity, IAggregateRoot
 
     public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
     {
-        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        if (Items.All(i => i.CatalogItemId != catalogItemId))
         {
             _items.Add(new BasketItem(catalogItemId, quantity, unitPrice));
             return;

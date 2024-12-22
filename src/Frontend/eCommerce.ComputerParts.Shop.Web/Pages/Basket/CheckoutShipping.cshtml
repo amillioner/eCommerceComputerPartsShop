@@ -15,18 +15,18 @@
     </div>
 
     <!-- Shipping Address Form -->
-    <form method="post">
+    <form method="post" id="shippingForm">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="FirstName">First Name</label>
-                    <input asp-for="ShippingAddress.FirstName" class="form-control" placeholder="Enter your first name"/>
+                    <input asp-for="ShippingAddress.FirstName" class="form-control" placeholder="Enter your first name" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="LastName">Last Name</label>
-                    <input asp-for="ShippingAddress.LastName" class="form-control" placeholder="Enter your last name"/>
+                    <input asp-for="ShippingAddress.LastName" class="form-control" placeholder="Enter your last name" />
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="Street">Street</label>
-                    <input asp-for="ShippingAddress.Street" class="form-control" placeholder="Enter your street"/>
+                    <input asp-for="ShippingAddress.Street" class="form-control" placeholder="Enter your street" />
                 </div>
             </div>
         </div>
@@ -42,19 +42,19 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="City">City</label>
-                    <input asp-for="ShippingAddress.City" class="form-control" placeholder="Enter your city"/>
+                    <input asp-for="ShippingAddress.City" class="form-control" placeholder="Enter your city" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="State">State</label>
-                    <input asp-for="ShippingAddress.State" class="form-control" placeholder="Enter your state"/>
+                    <input asp-for="ShippingAddress.State" class="form-control" placeholder="Enter your state" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="ZipCode">Zip Code</label>
-                    <input asp-for="ShippingAddress.ZipCode" class="form-control" placeholder="Enter zip code"/>
+                    <input asp-for="ShippingAddress.ZipCode" class="form-control" placeholder="Enter zip code" />
                 </div>
             </div>
         </div>
@@ -75,10 +75,10 @@
             <div class="col-md-9">Shipping and Handling</div>
             <div class="col-md-3 text-right">$0.00</div>
         </div>
-        <hr/>
+        <hr />
         <div class="row font-weight-bold">
             <div class="col-md-9">Total</div>
-            <div class="col-md-3 text-right">$180.00</div>
+            <div class="col-md-3 text-right">$ @Model.BasketModel.Total().ToString("N2")</div>
         </div>
     </div>
 
