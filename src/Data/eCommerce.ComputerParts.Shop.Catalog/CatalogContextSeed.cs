@@ -65,7 +65,8 @@ public class CatalogContextSeed
                 new("CORSAIR"),
                 new("Intel"),
                 new("Samsung"),
-                new("Seagate")
+                new("Seagate"),
+                new("G.SKILL")
             };
     }
 
@@ -84,9 +85,9 @@ public class CatalogContextSeed
     {
         return new List<CatalogItem>
             {
-                new(2,2, "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", 190.5M,  "https://c1.neweggimages.com/productimage/nb1280/22-183-793-V06.jpg"),
-                new(1,2, "MSI Ventus GeForce RTX 4060", "MSI Ventus GeForce RTX 4060", 1800.50M, "https://c1.neweggimages.com/productimage/nb1280/14-137-804-11.jpg"),
-                new(2,5, "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", 458,  "https://c1.neweggimages.com/productimage/nb1280/13-144-557-08.jpg"),
+                new(2,5, "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", "Seagate BarraCuda NE-ST8000DM004 8TB 5400 RPM 256MB Cache SATA 6.0Gb/s 3.5\" Internal Hard Drive Bare Drive", 190.5M,  "https://c1.neweggimages.com/productimage/nb1280/22-183-793-V06.jpg"),
+                new(1,1, "MSI Ventus GeForce RTX 4060", "MSI Ventus GeForce RTX 4060", 1800.50M, "https://c1.neweggimages.com/productimage/nb1280/14-137-804-11.jpg"),
+                new(2,1, "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", "MSI MAG B650 TOMAHAWK WIFI AM5 AMD B650 SATA 6Gb/s DDR5 Ryzen 7000 ATX Motherboard", 458,  "https://c1.neweggimages.com/productimage/nb1280/13-144-557-08.jpg"),
                 new(2,2, "CORSAIR iCUE H150i ELITE CAPELLIX XT Liquid CPU Cooler - AF120 RGB ELITE Fans - 360mm Radiator", "CORSAIR iCUE H150i ELITE CAPELLIX XT Liquid CPU Cooler - AF120 RGB ELITE Fans - 360mm Radiator", 123, "https://c1.neweggimages.com/productimage/nb1280/35-181-332-01.png"),
                 new(3,5, "G.SKILL Flare X Series 64GB (2 x 32GB) 288-Pin PC RAM DDR5 6000", "G.SKILL Flare X Series 64GB (2 x 32GB) 288-Pin PC RAM DDR5 6000", 8.5M, "https://c1.neweggimages.com/productimage/nb1280/20-374-419-07.png"),
                 new(2,2, "Cooler Master Hyper", "Cooler Master Hyper", 147, "https://c1.neweggimages.com/productimage/nb1280/35-103-364-01.png"),

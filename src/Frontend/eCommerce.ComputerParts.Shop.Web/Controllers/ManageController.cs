@@ -543,7 +543,7 @@ public class ManageController : Controller
     {
         return string.Format(
             AuthenticatorUriFormat,
-            _urlEncoder.Encode("eShopOnWeb"),
+            _urlEncoder.Encode("ComputerParts"),
             _urlEncoder.Encode(email),
             unformattedKey);
     }
