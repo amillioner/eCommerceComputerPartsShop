@@ -55,7 +55,10 @@ public class CatalogViewModelService : ICatalogViewModelService
             CatalogItems =
                 itemsOnPage.Select(i => new CatalogItemViewModel
                 {
-                    Id = i.Id, Name = i.Name, PictureUri = _uriComposer.ComposePicUri(i.PictureUri), Price = i.Price
+                    Id = i.Id,
+                    Name = i.Name,
+                    PictureUri = _uriComposer.ComposePicUri(i.PictureUri),
+                    Price = i.Price
                 }).ToList(),
             Brands = (await GetBrands()).ToList(),
             Types = (await GetTypes()).ToList(),

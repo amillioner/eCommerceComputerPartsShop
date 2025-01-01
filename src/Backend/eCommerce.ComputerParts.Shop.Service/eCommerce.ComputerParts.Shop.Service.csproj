@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\common\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj" />
     <ProjectReference Include="..\..\Data\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj" />
   </ItemGroup>

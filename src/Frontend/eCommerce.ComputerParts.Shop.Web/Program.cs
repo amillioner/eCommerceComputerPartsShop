@@ -170,7 +170,8 @@ app.UseHealthChecks("/health",
                 status = report.Status.ToString(),
                 errors = report.Entries.Select(e => new
                 {
-                    key = e.Key, value = Enum.GetName(typeof(HealthStatus), e.Value.Status)
+                    key = e.Key,
+                    value = Enum.GetName(typeof(HealthStatus), e.Value.Status)
                 })
             }.ToJson();
             context.Response.ContentType = MediaTypeNames.Application.Json;

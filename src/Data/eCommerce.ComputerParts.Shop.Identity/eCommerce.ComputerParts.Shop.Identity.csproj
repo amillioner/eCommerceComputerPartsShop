@@ -15,7 +15,7 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\..\common\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+	  <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
 	  <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Shared\eCommerce.ComputerParts.Shop.Shared.csproj" />
 	</ItemGroup>
 </Project>

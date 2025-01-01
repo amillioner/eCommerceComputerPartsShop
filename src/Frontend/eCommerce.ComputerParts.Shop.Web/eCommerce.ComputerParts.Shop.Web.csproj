@@ -42,8 +42,8 @@
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\common\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
-    <ProjectReference Include="..\..\common\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Core\eCommerce.ComputerParts.Shop.Core.csproj" />
+    <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Infrastructure\eCommerce.ComputerParts.Shop.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Common\eCommerce.ComputerParts.Shop.Shared\eCommerce.ComputerParts.Shop.Shared.csproj" />
     <ProjectReference Include="..\..\Data\eCommerce.ComputerParts.Shop.Catalog\eCommerce.ComputerParts.Shop.Catalog.csproj" />
     <ProjectReference Include="..\..\Data\eCommerce.ComputerParts.Shop.Identity\eCommerce.ComputerParts.Shop.Identity.csproj" />

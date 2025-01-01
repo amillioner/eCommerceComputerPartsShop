@@ -5,14 +5,14 @@ services:
     image: ${DOCKER_REGISTRY-}eshopwebmvc
     build:
       context: .
-      dockerfile: src/Web/Dockerfile
+      dockerfile: src/Frontend/eCommerce.ComputerParts.Shop.Web/Dockerfile
     depends_on:
       - "sqlserver"
   eshoppublicapi:
     image: ${DOCKER_REGISTRY-}eshoppublicapi
     build:
       context: .
-      dockerfile: src/PublicApi/Dockerfile
+      dockerfile: src/Backend/eCommerce.ComputerParts.Shop.Service/Dockerfile
     depends_on:
       - "sqlserver"
   sqlserver:

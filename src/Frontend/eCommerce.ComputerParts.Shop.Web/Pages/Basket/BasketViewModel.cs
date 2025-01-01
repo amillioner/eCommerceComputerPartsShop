@@ -18,7 +18,7 @@ public class BasketViewModel
     }
     public decimal GrandTotal()
     {
-        var subTotal =  Math.Round(Items.Sum(x => x.UnitPrice * x.Quantity), 2);
+        var subTotal = Math.Round(Items.Sum(x => x.UnitPrice * x.Quantity), 2);
         return subTotal + ShippingCost;
     }
 }
