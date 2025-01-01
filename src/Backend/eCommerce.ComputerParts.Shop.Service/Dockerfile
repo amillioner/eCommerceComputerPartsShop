@@ -11,7 +11,7 @@ COPY . .
 #COPY ["src/PublicApi/PublicApi.csproj", "./PublicApi/"]
 #RUN dotnet restore "./PublicApi/PublicApi.csproj"
 #COPY . .
-WORKDIR "/src/Backend/eCommerce.ComputerParts.Shop.Service"
+WORKDIR "/app/src/Backend/eCommerce.ComputerParts.Shop.Service"
 RUN dotnet restore
 
 RUN dotnet publish "./eCommerce.ComputerParts.Shop.Service.csproj" -c Release -o /app/build

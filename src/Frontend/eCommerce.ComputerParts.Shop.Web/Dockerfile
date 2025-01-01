@@ -5,6 +5,7 @@
 # RUN JUST THIS CONTAINER FROM ROOT (folder with .sln file):
 # docker build --pull -t web -f src/Web/Dockerfile .
 # docker build --pull -t web -f src/Frontend/eCommerce.ComputerParts.Shop.Web/Dockerfile .
+# docker build --pull -t api -f src/Backend/eCommerce.ComputerParts.Shop.Service/Dockerfile .
 #
 # RUN COMMAND
 #  docker run --name eshopweb --rm -it -p 5106:5106 web
