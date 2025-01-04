@@ -1,15 +1,15 @@
 version: '3.4'
 
 services:
-  eshopwebmvc:
-    image: ${DOCKER_REGISTRY-}eshopwebmvc
+  computerpartsshopweb:
+    image: ${DOCKER_REGISTRY-}computerpartsshopweb
     build:
       context: .
       dockerfile: src/Frontend/eCommerce.ComputerParts.Shop.Web/Dockerfile
     depends_on:
       - "sqlserver"
-  eshoppublicapi:
-    image: ${DOCKER_REGISTRY-}eshoppublicapi
+  computerpartsshopservice:
+    image: ${DOCKER_REGISTRY-}computerpartsshopservice
     build:
       context: .
       dockerfile: src/Backend/eCommerce.ComputerParts.Shop.Service/Dockerfile
