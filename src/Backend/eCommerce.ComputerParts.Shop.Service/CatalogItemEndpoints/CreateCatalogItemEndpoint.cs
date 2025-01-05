@@ -49,11 +49,12 @@ public class CreateCatalogItemEndpoint : IEndpoint<IResult, CreateCatalogItemReq
         var newItem = new CatalogItem(request.CatalogTypeId, request.CatalogBrandId, request.Description, request.Name, request.Price, request.PictureUri);
         newItem = await itemRepository.AddAsync(newItem);
 
-        if (newItem.Id != 0)
-        {
-            newItem.UpdatePictureUri("eCatalog-item-default.png");
-            await itemRepository.UpdateAsync(newItem);
-        }
+        //removed for the picture fix
+        //if (newItem.Id != 0)
+        //{
+        //    newItem.UpdatePictureUri("eCatalog-item-default.png");
+        //    await itemRepository.UpdateAsync(newItem);
+        //}
 
         var dto = new CatalogItemDto
         {

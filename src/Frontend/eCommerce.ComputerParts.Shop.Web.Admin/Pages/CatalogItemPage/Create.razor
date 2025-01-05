@@ -48,6 +48,13 @@
                                             <ValidationMessage For="(() => _item.Description)" />
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-6">PictureUrl</label>
+                                        <div class="col-md-12">
+                                            <InputText class="form-control" @bind-Value="_item.PictureUri" />
+                                            <ValidationMessage For="(() => _item.PictureUri)" />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
